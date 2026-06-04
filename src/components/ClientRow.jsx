@@ -1,11 +1,13 @@
-function ClientRow() {
+import React from "react";
+
+function ClientRow({ name, email, company, status, actions }) {
   return (
     <tr>
-      <td>Client Name</td>
-      <td>Email</td>
-      <td>Company</td>
-      <td>Status</td>
-      <td>Actions</td>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{company}</td>
+      <td>{status}</td>
+      <td>{actions}</td>
     </tr>
   );
 }

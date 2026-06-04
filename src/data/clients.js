@@ -5,6 +5,7 @@ export const initialClients = [
     email: "sarah.johnson@example.com",
     company: "Johnson Consulting",
     status: "Active",
+    actions: "",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const initialClients = [
     email: "michael.chen@example.com",
     company: "Chen Analytics",
     status: "Pending",
+    actions: "",
   },
   {
     id: 3,
@@ -19,5 +21,6 @@ export const initialClients = [
     email: "ava.martinez@example.com",
     company: "Martinez Media",
     status: "Inactive",
+    actions: "",
   },
 ];
