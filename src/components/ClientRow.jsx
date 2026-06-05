@@ -7,7 +7,11 @@ function ClientRow({ name, email, company, status, actions }) {
       <td>{email}</td>
       <td>{company}</td>
       <td>{status}</td>
-      <td>{actions}</td>
+      <td>
+        {actions.map((action) => (
+          <button key={action}>{action}</button>
+        ))}
+      </td>
     </tr>
   );
 }
