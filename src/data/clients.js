@@ -23,4 +23,12 @@ export const initialClients = [
     status: "Inactive",
     actions: ["Edit", "Delete", "View", "Message", "More"],
   },
+  {
+    id: 4,
+    name: "Richard Ludwick",
+    email: "richard.ludwick@example.com",
+    company: "Ludwick Films",
+    status: "Active",
+    actions: ["Edit", "Delete", "View", "Message", "More"],
+  },
 ];

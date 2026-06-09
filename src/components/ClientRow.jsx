@@ -1,8 +1,10 @@
 // Import React so this component can use JSX
 import React from "react";
+import { useState } from "react";
 
 // Renders a single table row for one client
 function ClientRow({ name, email, company, status, actions }) {
+  const [isEditing, setIsEditing] = useState(false);
   return (
     <tr>
       <td>{name}</td>
