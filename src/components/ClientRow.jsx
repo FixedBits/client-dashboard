@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 // Renders a single table row for one client
-function ClientRow({ name, email, company, status, actions }) {
+function ClientRow({ name, email, company, status, actions, onSave }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editName, setEditName] = useState(name);
   const [editEmail, setEditEmail] = useState(email);
@@ -25,7 +25,21 @@ function ClientRow({ name, email, company, status, actions }) {
       </td>
 
       <td>
-        <button onClick={() => setIsEditing(!isEditing)}>{isEditing ? "Save" : "Edit"}</button>
+        <button
+          onClick={() => {
+            if (isEditing) {
+              onSave({
+                name: editName,
+                email: editEmail,
+                company: editCompany,
+                status: editStatus,
+              });
+            }
+            setIsEditing(!isEditing);
+          }}
+        >
+          {isEditing ? "Save" : "Edit"}
+        </button>
       </td>
     </tr>
   );

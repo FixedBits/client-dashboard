@@ -1,6 +1,8 @@
 // Import React so JSX works
 import React from "react";
 
+import { useState } from "react";
+
 // Import the row component that renders a <tr>
 import ClientRow from "./ClientRow";
 
@@ -8,6 +10,12 @@ import ClientRow from "./ClientRow";
 import { initialClients } from "../data/clients";
 
 function ClientTable() {
+  const [clients, setClients] = useState(initialClients);
+
+  function handleSave(id, updatedClient) {
+    setClients((prev) => prev.map((client) => (client.id === id ? { ...client, ...updatedClient } : client)));
+  }
+
   return (
     <div>
       <h2>Clients</h2>
@@ -31,11 +39,9 @@ function ClientTable() {
             <th>Actions</th>
           </tr>
         </thead>
-
         <tbody>
-          {/* Loop through all clients and pass their data into one ClientRow component */}
-          {initialClients.map((client) => (
-            <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} />
+          {clients.map((client) => (
+            <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} onSave={(updatedClient) => handleSave(client.id, updatedClient)} />
           ))}
         </tbody>
       </table>
