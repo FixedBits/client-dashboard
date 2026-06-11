@@ -5,12 +5,17 @@ import { useState } from "react";
 // Renders a single table row for one client
 function ClientRow({ name, email, company, status, actions }) {
   const [isEditing, setIsEditing] = useState(false);
+  const [editName, setEditName] = useState(name);
+  const [editEmail, setEditEmail] = useState(email);
+  const [editCompany, setEditCompany] = useState(company);
+  const [editStatus, setEditStatus] = useState(status);
+
   return (
     <tr>
-      <td>{name}</td>
-      <td>{email}</td>
-      <td>{company}</td>
-      <td>{status}</td>
+      <td>{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
+      <td>{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
+      <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
+      <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : status}</td>
 
       {/* Render one button for each action in the actions array */}
       <td>
