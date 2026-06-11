@@ -18,6 +18,10 @@ function ClientRow({ name, email, company, status, actions }) {
           <button key={action}>{action}</button>
         ))}
       </td>
+
+      <td>
+        <button onClick={() => setIsEditing(!isEditing)}>{isEditing ? "Save" : "Edit"}</button>
+      </td>
     </tr>
   );
 }
