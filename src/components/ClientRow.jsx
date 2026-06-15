@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 // Renders a single table row for one client
-function ClientRow({ name, email, company, status, actions, onSave }) {
+function ClientRow({ name, email, company, status, actions, onSave, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editName, setEditName] = useState(name);
   const [editEmail, setEditEmail] = useState(email);
@@ -20,7 +20,16 @@ function ClientRow({ name, email, company, status, actions, onSave }) {
       {/* Render one button for each action in the actions array */}
       <td>
         {actions.map((action) => (
-          <button key={action}>{action}</button>
+          <button
+            key={action}
+            onClick={() => {
+              if (action === "Delete") {
+                onDelete();
+              }
+            }}
+          >
+            {action}
+          </button>
         ))}
       </td>
 

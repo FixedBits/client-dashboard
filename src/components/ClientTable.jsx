@@ -16,6 +16,10 @@ function ClientTable() {
     setClients((prev) => prev.map((client) => (client.id === id ? { ...client, ...updatedClient } : client)));
   }
 
+  function handleDelete(id) {
+    setClients((prev) => prev.filter((client) => client.id !== id));
+  }
+
   return (
     <div>
       <h2>Clients</h2>
@@ -41,7 +45,7 @@ function ClientTable() {
         </thead>
         <tbody>
           {clients.map((client) => (
-            <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} onSave={(updatedClient) => handleSave(client.id, updatedClient)} />
+            <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} onSave={(updatedClient) => handleSave(client.id, updatedClient)} onDelete={() => handleDelete(client.id)} />
           ))}
         </tbody>
       </table>
