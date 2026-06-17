@@ -9,6 +9,7 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
   const [editEmail, setEditEmail] = useState(email);
   const [editCompany, setEditCompany] = useState(company);
   const [editStatus, setEditStatus] = useState(status);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   return (
     <tr>
