@@ -9,3 +9,27 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+
+.modal-overlay {
+  border: red solid 1px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal button {
+  margin: 10px 6px 0;
+}
