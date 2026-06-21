@@ -23,32 +23,33 @@ function ClientTable() {
   return (
     <div>
       <h2>Clients</h2>
+      <div className="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              {/* Column header */}
+              <th>Name</th>
 
-      <table>
-        <thead>
-          <tr>
-            {/* Column header */}
-            <th>Name</th>
+              {/* Column header */}
+              <th>Email</th>
 
-            {/* Column header */}
-            <th>Email</th>
+              {/* Column header */}
+              <th>Company</th>
 
-            {/* Column header */}
-            <th>Company</th>
+              {/* Column header */}
+              <th>Status</th>
 
-            {/* Column header */}
-            <th>Status</th>
-
-            {/* Column header */}
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {clients.map((client) => (
-            <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} onSave={(updatedClient) => handleSave(client.id, updatedClient)} onDelete={() => handleDelete(client.id)} />
-          ))}
-        </tbody>
-      </table>
+              {/* Column header */}
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {clients.map((client) => (
+              <ClientRow key={client.id} name={client.name} email={client.email} company={client.company} status={client.status} actions={client.actions} onSave={(updatedClient) => handleSave(client.id, updatedClient)} onDelete={() => handleDelete(client.id)} />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
