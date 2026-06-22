@@ -26,20 +26,12 @@ function ClientTable() {
       <div className="table-wrapper">
         <table>
           <thead>
+            {/* Column heades */}
             <tr>
-              {/* Column header */}
               <th>Name</th>
-
-              {/* Column header */}
               <th>Email</th>
-
-              {/* Column header */}
               <th>Company</th>
-
-              {/* Column header */}
               <th>Status</th>
-
-              {/* Column header */}
               <th>Actions</th>
             </tr>
           </thead>
