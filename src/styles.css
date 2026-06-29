@@ -70,11 +70,6 @@ tbody td {
   color: #1a1a1a;
 }
 
-/* Hover effect */
-tbody tr:hover {
-  background: #f2f2f2;
-}
-
 /* Buttons inside table */
 table button {
   padding: 6px 12px;
@@ -88,4 +83,16 @@ table button {
 
 table button:hover {
   background: #d0d0d0;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+/* Hover effect */
+tbody tr:hover {
+  background: #e0e0e0;
 }
