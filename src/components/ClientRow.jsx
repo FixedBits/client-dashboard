@@ -1,4 +1,4 @@
-// Import React so this component can use JSX
+// Import React
 import React from "react";
 import { useState } from "react";
 
@@ -19,38 +19,28 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
         <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
         <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : status}</td>
 
-        {/* Render one button for each action in the actions array */}
         <td>
           {actions.map((action) => (
             <button
               key={action}
               onClick={() => {
-                if (action === "Delete") {
-                  setShowConfirm(true);
+                if (action === "Delete") setShowConfirm(true);
+                if (action === "Edit") {
+                  if (isEditing) {
+                    onSave({
+                      name: editName,
+                      email: editEmail,
+                      company: editCompany,
+                      status: editStatus,
+                    });
+                  }
+                  setIsEditing(!isEditing);
                 }
               }}
             >
-              {action}
+              {action === "Edit" && isEditing ? "Save" : action}
             </button>
           ))}
-        </td>
-
-        <td>
-          <button
-            onClick={() => {
-              if (isEditing) {
-                onSave({
-                  name: editName,
-                  email: editEmail,
-                  company: editCompany,
-                  status: editStatus,
-                });
-              }
-              setIsEditing(!isEditing);
-            }}
-          >
-            {isEditing ? "Save" : "Edit"}
-          </button>
         </td>
       </tr>
 

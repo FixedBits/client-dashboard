@@ -5,7 +5,7 @@ export const initialClients = [
     email: "sarah.johnson@example.com",
     company: "Johnson Consulting",
     status: "Active",
-    actions: ["Delete", "View", "Message", "More"],
+    actions: ["Delete", "View", "Edit"],
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const initialClients = [
     email: "michael.chen@example.com",
     company: "Chen Analytics",
     status: "Pending",
-    actions: ["Delete", "View", "Message", "More"],
+    actions: ["Delete", "View", "Edit"],
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const initialClients = [
     email: "ava.martinez@example.com",
     company: "Martinez Media",
     status: "Inactive",
-    actions: ["Delete", "View", "Message", "More"],
+    actions: ["Delete", "View", "Edit"],
   },
   {
     id: 4,
@@ -29,6 +29,6 @@ export const initialClients = [
     email: "richard.ludwick@example.com",
     company: "Ludwick Films",
     status: "Active",
-    actions: ["Delete", "View", "Message", "More"],
+    actions: ["Delete", "View", "Edit"],
   },
 ];
