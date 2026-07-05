@@ -10,19 +10,24 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
   const [editCompany, setEditCompany] = useState(company);
   const [editStatus, setEditStatus] = useState(status);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [showView, setShowView] = useState(false);
 
   return (
     <>
       <tr>
         <td>{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
-        <td>{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
-        <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
-        <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : status}</td>
 
-        <td>
+        <td>{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
+
+        <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
+
+        <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : <span className={`status-badge status-${status.toLowerCase()}`}>{status}</span>}</td>
+
+        <td className="actions-cell">
           {actions.map((action) => (
             <button
               key={action}
+              className={action.toLowerCase()}
               onClick={() => {
                 if (action === "Delete") setShowConfirm(true);
                 if (action === "Edit") {

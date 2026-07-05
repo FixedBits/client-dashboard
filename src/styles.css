@@ -61,6 +61,13 @@ thead th {
   border-bottom: 1px solid #d6d6d6;
 }
 
+/* Actions cell */
+td.actions-cell {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 /* Rows data*/
 tbody td {
   padding: 12px 14px;
@@ -94,4 +101,61 @@ tbody tr:nth-child(even) {
 /* Hover effect */
 tbody tr:hover {
   background: #e0e0e0;
+}
+
+/* Delete */
+table button.delete {
+  background: #ffdedf;
+  color: #b30000;
+}
+
+table button.delete:hover {
+  background: #ffc9cb;
+}
+
+/* Edit */
+table button.edit {
+  background: #dce8ff;
+  color: #0033cc;
+}
+
+table button.edit:hover {
+  background: #c7d9ff;
+}
+
+/* View */
+table button.view {
+  background: #e6f7f1;
+  color: #0f6b4d;
+}
+
+table button.view:hover {
+  background: #d9f2ea;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Active */
+.status-active {
+  background: #c8f3c8;
+  color: #1a7f1a;
+}
+/* Pending */
+.status-pending {
+  background: #ffe2b3;
+  color: #b36b00;
+}
+
+/* Inactive */
+.status-inactive {
+  background: #dcdcdc;
+  color: #555;
 }
