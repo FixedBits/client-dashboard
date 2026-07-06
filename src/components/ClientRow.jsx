@@ -10,18 +10,17 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
   const [editCompany, setEditCompany] = useState(company);
   const [editStatus, setEditStatus] = useState(status);
   const [showConfirm, setShowConfirm] = useState(false);
+
+  // View Model State
   const [showView, setShowView] = useState(false);
 
   return (
     <>
       <tr>
         <td>{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
-
         <td>{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
-
         <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
-
-        <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : <span className={`status-badge status-${status.toLowerCase()}`}>{status}</span>}</td>
+        <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>}</td>
 
         <td className="actions-cell">
           {actions.map((action) => (
@@ -30,6 +29,7 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
               className={action.toLowerCase()}
               onClick={() => {
                 if (action === "Delete") setShowConfirm(true);
+                if (action === "View") setShowView(true);
                 if (action === "Edit") {
                   if (isEditing) {
                     onSave({
@@ -66,6 +66,35 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
 
             <button className="btn" onClick={() => setShowConfirm(false)}>
               Cancel
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* View Modal */}
+      {showView && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h3>Client Details</h3>
+            <p>
+              <strong>Name: </strong>
+              {name}
+            </p>
+            <p>
+              <strong>Email: </strong>
+              {email}
+            </p>
+            <p>
+              <strong>Company: </strong>
+              {company}
+            </p>
+
+            <p>
+              <strong>Status:</strong> <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>
+            </p>
+
+            <button className="btn" onClick={() => setShowView(false)}>
+              Close
             </button>
           </div>
         </div>
