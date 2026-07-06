@@ -92,6 +92,12 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
             <p>
               <strong>Status:</strong> <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>
             </p>
+            <p>
+              <strong>Created At:</strong> {new Date(createdAt).toLocaleString()}
+            </p>
+            <p>
+              <strong>Updated At:</strong> {new Date(updatedAt).toLocaleString()}
+            </p>
 
             <button className="btn" onClick={() => setShowView(false)}>
               Close
