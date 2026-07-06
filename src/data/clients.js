@@ -6,6 +6,8 @@ export const initialClients = [
     company: "Johnson Consulting",
     status: "Active",
     actions: ["Delete", "View", "Edit"],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ export const initialClients = [
     company: "Chen Analytics",
     status: "Pending",
     actions: ["Delete", "View", "Edit"],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
   {
     id: 3,
@@ -22,6 +26,8 @@ export const initialClients = [
     company: "Martinez Media",
     status: "Inactive",
     actions: ["Delete", "View", "Edit"],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
   {
     id: 4,
@@ -30,5 +36,7 @@ export const initialClients = [
     company: "Ludwick Films",
     status: "Active",
     actions: ["Delete", "View", "Edit"],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
 ];

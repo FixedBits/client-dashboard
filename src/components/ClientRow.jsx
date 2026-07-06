@@ -49,6 +49,7 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
         </td>
       </tr>
 
+      {/* Delete confirm modal */}
       {showConfirm && (
         <div className="modal-overlay">
           <div className="modal">
@@ -88,7 +89,6 @@ function ClientRow({ name, email, company, status, actions, onSave, onDelete }) 
               <strong>Company: </strong>
               {company}
             </p>
-
             <p>
               <strong>Status:</strong> <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>
             </p>
