@@ -57,6 +57,8 @@ function ClientTable() {
                 email={client.email}
                 company={client.company}
                 status={client.status}
+                createdAt={client.createdAt}
+                updatedAt={client.updatedAt}
                 actions={client.actions}
                 // Pass save handler down to row
                 onSave={(updatedClient) => handleSave(client.id, updatedClient)}
