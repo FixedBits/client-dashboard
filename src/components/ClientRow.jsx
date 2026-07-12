@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 // Renders a single table row for one client
-function ClientRow({ name, email, company, status, actions, onSave, onDelete }) {
+function ClientRow({ name, email, company, status, actions, createdAt, updatedAt, onSave, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editName, setEditName] = useState(name);
   const [editEmail, setEditEmail] = useState(email);
