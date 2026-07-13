@@ -19,7 +19,7 @@ function ClientTable() {
       prev.map((client) =>
         client.id === id
           ? { ...client, ...updatedClient } // merge updated fields
-          : client
+          : client,
       ),
     );
   }
