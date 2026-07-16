@@ -93,7 +93,7 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
               <strong>Status:</strong> <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>
             </p>
             <p>
-              <strong>Created At:</strong>{" "}
+              <strong>Created At: </strong>
               {new Date(createdAt).toLocaleString([], {
                 year: "numeric",
                 month: "numeric",
@@ -103,7 +103,7 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
               })}
             </p>
             <p>
-              <strong>Updated At:</strong>{" "}
+              <strong>Updated At:</strong>
               {new Date(updatedAt).toLocaleString([], {
                 year: "numeric",
                 month: "numeric",
