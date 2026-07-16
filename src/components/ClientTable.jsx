@@ -15,13 +15,7 @@ function ClientTable() {
 
   // Update a single client by id after saving edits
   function handleSave(id, updatedClient) {
-    setClients((prev) =>
-      prev.map((client) =>
-        client.id === id
-          ? { ...client, ...updatedClient } // merge updated fields
-          : client,
-      ),
-    );
+    setClients((prev) => prev.map((client) => (client.id === id ? { ...client, ...updatedClient, updatedAt: new Date().toISOString() } : client)));
   }
 
   // Remove a client from the list by id
