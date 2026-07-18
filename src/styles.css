@@ -5,6 +5,7 @@ body {
   padding: 2rem;
 }
 .app {
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 16px;
   overflow-x: auto;
@@ -48,6 +49,12 @@ table {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.client-row input,
+.client-row select {
+  width: 100%;
+  max-width: 300px;
 }
 
 /* Table base */
