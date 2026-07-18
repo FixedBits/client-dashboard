@@ -17,12 +17,12 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
   return (
     <>
       <tr>
-        <td>{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
-        <td>{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
-        <td>{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
-        <td>{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>}</td>
+        <td data-label="Name">{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
+        <td data-label="Email">{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
+        <td data-label="Company">{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
+        <td data-label="Status">{isEditing ? <input value={editStatus} onChange={(e) => setEditStatus(e.target.value)} /> : <span className={`status-badge status-${status.trim().toLowerCase()}`}>{status}</span>}</td>
 
-        <td className="actions-cell">
+        <td data-label="Actions" className="actions-cell">
           {actions.map((action) => (
             <button
               key={action}

@@ -176,3 +176,45 @@ table button.view:hover {
 .modal strong {
   padding-right: 6px;
 }
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  tr {
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #333;
+  }
+
+  .actions-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+}
