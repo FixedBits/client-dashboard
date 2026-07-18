@@ -68,7 +68,6 @@ table {
 /* Header text */
 thead th {
   text-align: left;
-  padding: 14px;
   background: #e9e9e9;
   font-weight: 600;
   font-size: 14px;
@@ -200,28 +199,27 @@ table button.view:hover {
   }
 
   tr {
-    margin-bottom: 16px;
-    border: 1px solid #ddd;
-    padding: 12px;
-    border-radius: 8px;
+    margin-bottom: 20px;
     background: #fff;
-  }
-
-  td {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
   }
 
   td::before {
     content: attr(data-label);
     font-weight: 600;
     color: #333;
+    display: block;
+    margin-bottom: 4px;
   }
 
-  .actions-cell {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-start;
+  .actions-cell button {
+    margin-right: 16px;
+    font-size: 16px;
+  }
+
+  td.actions-cell {
+    display: block;
   }
 }

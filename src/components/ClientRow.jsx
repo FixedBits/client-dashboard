@@ -49,7 +49,7 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
         </td>
       </tr>
 
-      {/* Delete confirm modal */}
+      {/* Delete  modal */}
       {showConfirm && (
         <div className="modal-overlay">
           <div className="modal">
