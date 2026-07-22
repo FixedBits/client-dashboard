@@ -9,9 +9,18 @@ import ClientRow from "./ClientRow";
 // Import the initial client data array
 import { initialClients } from "../data/clients";
 
+// Import the client form that adds a new client
+import ClientForm from "./ClientForm";
+
 function ClientTable() {
   // Local state: holds the current list of clients
+  // Change state to [ ] to start with a clean list.
   const [clients, setClients] = useState(initialClients);
+
+  // New client handler
+  function handleAddClient(newClient) {
+    setClients((prev) => [...prev, newClient]);
+  }
 
   // Update a single client by id after saving edits
   function handleSave(id, updatedClient) {
@@ -26,8 +35,9 @@ function ClientTable() {
   return (
     <div>
       {/* Section title */}
-      <h2>Clients</h2>
+      <ClientForm onAddClient={handleAddClient} />
 
+      <h2>Clients</h2>
       {/* Wrapper for styling and scroll behavior */}
       <div className="table-wrapper">
         <table>
