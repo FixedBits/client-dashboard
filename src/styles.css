@@ -13,7 +13,6 @@ body {
   overflow-x: auto;
 }
 
-
 /* MODAL OVERLAY + MODAL BOX */
 .modal-overlay {
   position: fixed;
@@ -49,7 +48,6 @@ body {
   padding-right: 6px;
 }
 
-
 /* TABLE WRAPPER */
 .table-wrapper {
   border: 1px solid #c4c4c4;
@@ -61,7 +59,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-
 /* TABLE BASE */
 table {
   width: 100%;
@@ -70,7 +67,6 @@ table {
   background: #fafafa;
   color: #1a1a1a;
 }
-
 
 /* TABLE HEADER */
 thead th {
@@ -81,7 +77,6 @@ thead th {
   font-size: 14px;
   border-bottom: 1px solid #d6d6d6;
 }
-
 
 /* TABLE ROWS */
 tbody td {
@@ -103,7 +98,6 @@ tbody tr:hover {
   background: #e0e0e0;
 }
 
-
 /* ACTIONS CELL */
 td.actions-cell {
   display: flex;
@@ -116,14 +110,12 @@ td.actions-cell {
   font-size: 16px;
 }
 
-
 /* FORM INPUTS INSIDE ROWS */
 .client-row input,
 .client-row select {
   width: 100%;
   max-width: 300px;
 }
-
 
 /* TABLE BUTTONS (BASE) */
 table button {
@@ -140,7 +132,6 @@ table button:hover {
   background: #d0d0d0;
 }
 
-
 /* BUTTON: DELETE */
 table button.delete {
   background: #ffdedf;
@@ -150,7 +141,6 @@ table button.delete {
 table button.delete:hover {
   background: #ffc9cb;
 }
-
 
 /* BUTTON: EDIT */
 table button.edit {
@@ -162,7 +152,6 @@ table button.edit:hover {
   background: #c7d9ff;
 }
 
-
 /* BUTTON: VIEW */
 table button.view {
   background: #e6f7f1;
@@ -172,7 +161,6 @@ table button.view {
 table button.view:hover {
   background: #d9f2ea;
 }
-
 
 /* STATUS BADGES */
 .status-badge {
@@ -199,7 +187,6 @@ table button.view:hover {
   color: #555;
 }
 
-
 /* MOBILE LAYOUT */
 @media (max-width: 768px) {
   table,
@@ -215,15 +202,6 @@ table button.view:hover {
   thead {
     display: none;
   }
-
-  tr {
-    margin-bottom: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 16px;
-  }
-
   td::before {
     content: attr(data-label);
     font-weight: 600;
@@ -231,7 +209,13 @@ table button.view:hover {
     display: block;
     margin-bottom: 4px;
   }
-
+  tr {
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+  }
   td.actions-cell {
     display: block;
   }
