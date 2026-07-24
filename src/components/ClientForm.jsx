@@ -19,7 +19,7 @@ function ClientForm({ onAddClient }) {
       status,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      actions: ["Delete", "View", "Edit"], 
+      actions: ["Delete", "View", "Edit"],
     };
 
     onAddClient(newClient);
@@ -37,7 +37,7 @@ function ClientForm({ onAddClient }) {
       <h2>Add New Client</h2>
       <label>
         Name
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />{" "}
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
       </label>
       <label>
         Email
