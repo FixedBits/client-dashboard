@@ -49,7 +49,11 @@ function ClientForm({ onAddClient }) {
       </label>
       <label>
         Status
-        <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} />
+        <select type="text" value={status} onChange={(e) => setStatus(e.target.value)}>
+          <option value="Active">Active</option>
+          <option value="Pending">Pending</option>
+          <option value="Inactive">Inactive</option>
+        </select>
       </label>
 
       <button type="submit">Add Client</button>
