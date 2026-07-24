@@ -187,6 +187,12 @@ table button.view:hover {
   color: #555;
 }
 
+/* Add new client component */
+.add-client-form {
+  /* Testing border */
+  border: rgb(123, 72, 243) solid 1px;
+}
+
 /* MOBILE LAYOUT */
 @media (max-width: 768px) {
   table,
