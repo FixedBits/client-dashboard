@@ -4,14 +4,22 @@ import { useState } from "react";
 
 // Renders a single table row for one client
 function ClientRow({ name, email, company, status, actions, createdAt, updatedAt, onSave, onDelete }) {
+  // Tracks whether the row is in "edit mode" or "view mode"
+  // false = view mode, true = edit mode
   const [isEditing, setIsEditing] = useState(false);
+
+  // Local editable copies of the client's data.
+  // These start with the current client values (name, email, etc.)
+  // so that when you click "Edit", the inputs are pre-filled.
   const [editName, setEditName] = useState(name);
   const [editEmail, setEditEmail] = useState(email);
   const [editCompany, setEditCompany] = useState(company);
   const [editStatus, setEditStatus] = useState(status);
+
+  // Controls whether the delete confirmation modal is visible
   const [showConfirm, setShowConfirm] = useState(false);
 
-  // View Model State
+  // Controls whether the "View Details" modal is visible
   const [showView, setShowView] = useState(false);
 
   return (
