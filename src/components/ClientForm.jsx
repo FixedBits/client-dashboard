@@ -18,7 +18,8 @@ function ClientForm({ onAddClient }) {
       company,
       status,
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().tolSOString(),
+      updatedAt: new Date().toISOString(),
+      actions: ["Delete", "View", "Edit"], 
     };
 
     onAddClient(newClient);
