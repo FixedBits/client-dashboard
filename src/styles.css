@@ -7,7 +7,7 @@ body {
 }
 
 .app {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 0 16px;
   overflow-x: auto;
@@ -53,7 +53,7 @@ body {
   border: 1px solid #c4c4c4;
   width: 100%;
   overflow-x: auto;
-  margin-top: 20px;
+  margin-top: 25px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -117,7 +117,7 @@ td.actions-cell {
   max-width: 300px;
 }
 
-.client-row .name-cell {
+.client-row .nowrap {
   white-space: nowrap;
 }
 
@@ -193,8 +193,11 @@ table button.view:hover {
 
 /* Add new client component */
 .add-client-form {
-  /* Testing border */
-  border: rgb(123, 72, 243) solid 1px;
+  /* Border for Testing */
+  border: rgb(145, 145, 145) solid 1px;
+  max-width: 950px;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 Form .error {
