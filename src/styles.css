@@ -117,6 +117,10 @@ td.actions-cell {
   max-width: 300px;
 }
 
+.client-row .name-cell {
+  white-space: nowrap;
+}
+
 /* TABLE BUTTONS (BASE) */
 table button {
   padding: 6px 12px;

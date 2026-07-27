@@ -25,7 +25,9 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
   return (
     <>
       <tr className="client-row">
-        <td data-label="Name">{isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}</td>
+        <td data-label="Name" className="name-cell">
+          {isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}
+        </td>
         <td data-label="Email">{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
         <td data-label="Company">{isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}</td>
         <td data-label="Status">
