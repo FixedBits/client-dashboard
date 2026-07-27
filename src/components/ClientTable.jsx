@@ -19,7 +19,8 @@ function ClientTable() {
 
   // New client handler
   function handleAddClient(newClient) {
-    setClients((prev) => [...prev, newClient]);
+    // Adds new client to the TOP of the page
+    setClients((prev) => [newClient, ...prev]);
   }
 
   // Update a single client by id after saving edits
