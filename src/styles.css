@@ -193,6 +193,10 @@ table button.view:hover {
   border: rgb(123, 72, 243) solid 1px;
 }
 
+Form .error {
+  color: crimson;
+}
+
 /* MOBILE LAYOUT */
 @media (max-width: 768px) {
   table,
