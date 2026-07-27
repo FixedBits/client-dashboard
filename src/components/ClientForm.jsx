@@ -17,8 +17,6 @@ function ClientForm({ onAddClient }) {
     if (!name.trim()) newErrors.name = "Name is required.";
     if (!email.trim()) newErrors.email = "Email is required.";
     if (!email.includes("@")) newErrors.email = "Email must contain '@'.";
-    if (!email.includes("#")) newErrors.email = "Email must contain '#'.";
-
     if (!company.trim()) newErrors.company = "Company is required.";
 
     // Note: Drop-down select box - trim() not applicable
