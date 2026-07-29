@@ -12,32 +12,9 @@ import { initialClients } from "../data/clients";
 // Import the client form that adds a new client
 import ClientForm from "./ClientForm";
 
-function ClientTable() {
-  // Local state: holds the current list of clients
-  // Change state to [ ] to start with a clean list.
-  const [clients, setClients] = useState(initialClients);
-
-  // New client handler
-  function handleAddClient(newClient) {
-    // Adds new client to the TOP of the page
-    setClients((prev) => [newClient, ...prev]);
-  }
-
-  // Update a single client by id after saving edits
-  function handleSave(id, updatedClient) {
-    setClients((prev) => prev.map((client) => (client.id === id ? { ...client, ...updatedClient, updatedAt: new Date().toISOString() } : client)));
-  }
-
-  // Remove a client from the list by id
-  function handleDelete(id) {
-    setClients((prev) => prev.filter((client) => client.id !== id));
-  }
-
+function ClientTable({ clients, onSave, onDelete }) {
   return (
     <div>
-      {/* Section title */}
-      <ClientForm onAddClient={handleAddClient} />
-
       <h2>Clients</h2>
       {/* Wrapper for styling and scroll behavior */}
       <div className="table-wrapper">
@@ -66,9 +43,9 @@ function ClientTable() {
                 updatedAt={client.updatedAt}
                 actions={client.actions}
                 // Pass save handler down to row
-                onSave={(updatedClient) => handleSave(client.id, updatedClient)}
+                onSave={(updatedClient) => onSave(client.id, updatedClient)}
                 // Pass delete handler down to row
-                onDelete={() => handleDelete(client.id)}
+                onDelete={() => onDelete(client.id)}
               />
             ))}
           </tbody>
