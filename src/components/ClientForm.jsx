@@ -1,8 +1,7 @@
-// Import React so this component can use JSX
 import React, { useState } from "react";
 
 // Simple form component used for adding or editing a client
-function ClientForm({ onAddClient }) {
+function ClientForm({ onAddClient, onCancel }) {
   // Local state for each input field
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -57,58 +56,65 @@ function ClientForm({ onAddClient }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="add-client-form">
-      <h2>Add New Client</h2>
+    <>
+      <form onSubmit={handleSubmit} className="add-client-form">
+        <h2>Add New Client</h2>
 
-      <label>
-        Name
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)} // Update name state
-        />
-        {errors.name && <p className="error">{errors.name}</p>}
-      </label>
+        <label>
+          Name
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)} // Update name state
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+        </label>
 
-      <label>
-        Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)} // Update email state
-        />
-        {errors.email && <p className="error">{errors.email}</p>}
-      </label>
+        <label>
+          Email
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} // Update email state
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+        </label>
 
-      <label>
-        Company
-        <input
-          type="text"
-          value={company}
-          onChange={(e) => setCompany(e.target.value)} // Update company state
-        />
-        {errors.company && <p className="error">{errors.company}</p>}
-      </label>
+        <label>
+          Company
+          <input
+            type="text"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)} // Update company state
+          />
+          {errors.company && <p className="error">{errors.company}</p>}
+        </label>
 
-      <label>
-        Status
-        <select
-          key={status} // Forces re-render when status resets
-          value={status}
-          onChange={(e) => setStatus(e.target.value)} // Update status state
-        >
-          <option value="" disabled>
-            Select Status
-          </option>
-          <option value="Active">Active</option>
-          <option value="Pending">Pending</option>
-          <option value="Inactive">Inactive</option>
-        </select>
-        {errors.status && <p className="error">{errors.status}</p>}
-      </label>
+        <label>
+          Status
+          <select
+            key={status} // Forces re-render when status resets
+            value={status}
+            onChange={(e) => setStatus(e.target.value)} // Update status state
+          >
+            <option value="" disabled>
+              Select Status
+            </option>
+            <option value="Active">Active</option>
+            <option value="Pending">Pending</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          {errors.status && <p className="error">{errors.status}</p>}
+        </label>
 
-      <button type="submit">Add Client</button>
-    </form>
+        <div className="form-btns">
+          <button type="submit">Add Client</button>
+          <button type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        </div>
+      </form>
+    </>
   );
 }
 
