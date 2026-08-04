@@ -1,39 +1,40 @@
 import React, { useState } from "react";
 
-// Simple form component used for adding or editing a client
+// Component: Form used to create a new client
 function ClientForm({ onAddClient, onCancel }) {
-  // Local state for each input field
+  // State: stores the current text typed into each input field
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [status, setStatus] = useState("");
 
-  // Holds validation error messages for each field
+  // State: stores validation error messages for each field
   const [errors, setErrors] = useState({});
 
+  // Handler: runs when the form is submitted
   function handleSubmit(e) {
-    e.preventDefault(); // Prevent page reload on form submit
+    e.preventDefault(); // Stop the browser from refreshing the page
 
-    const newErrors = {}; // Object to collect any validation errors
+    const newErrors = {}; // Temporary object to collect validation errors
 
-    // Validate each field and add an error key if invalid
+    // Validate each field. If invalid, store an error message.
     if (!name.trim()) newErrors.name = "Name is required.";
     if (!email.trim()) newErrors.email = "Email is required.";
     if (!email.includes("@")) newErrors.email = "Email must contain '@'.";
     if (!company.trim()) newErrors.company = "Company is required.";
 
-    // Drop-down: only check if empty
+    // Validate dropdown: must not be empty
     if (!status) newErrors.status = "Status is required.";
 
-    // If ANY error keys exist, show errors and stop submission
+    // If ANY errors exist, show them and stop the submit process
     if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors); // Display errors in UI
-      return; // Stop function so client is NOT added
+      setErrors(newErrors); // Display errors in the UI
+      return; // Stop here — do NOT add client
     }
 
-    // Build new client object when validation passes
+    // Build the new client object (this is what gets added to the list)
     const newClient = {
-      id: crypto.randomUUID(), // Unique ID for the client
+      id: crypto.randomUUID(), // Generate unique ID
       name,
       email,
       company,
@@ -43,15 +44,16 @@ function ClientForm({ onAddClient, onCancel }) {
       actions: ["Delete", "View", "Edit"], // Actions available for this client
     };
 
-    onAddClient(newClient); // Send new client to parent component
+    // Send the new client object to the parent component
+    onAddClient(newClient);
 
-    // Clear form fields after successful submission
+    // Clear all input fields after successful submit
     setName("");
     setEmail("");
     setCompany("");
     setStatus("");
 
-    // Reset errors back to an empty object
+    // Clear all error messages
     setErrors({});
   }
 
@@ -60,6 +62,7 @@ function ClientForm({ onAddClient, onCancel }) {
       <form onSubmit={handleSubmit} className="add-client-form">
         <h2>Add New Client</h2>
 
+        {/* Name input */}
         <label>
           Name
           <input
@@ -70,6 +73,7 @@ function ClientForm({ onAddClient, onCancel }) {
           {errors.name && <p className="error">{errors.name}</p>}
         </label>
 
+        {/* Email input */}
         <label>
           Email
           <input
@@ -80,6 +84,7 @@ function ClientForm({ onAddClient, onCancel }) {
           {errors.email && <p className="error">{errors.email}</p>}
         </label>
 
+        {/* Company input */}
         <label>
           Company
           <input
@@ -90,6 +95,7 @@ function ClientForm({ onAddClient, onCancel }) {
           {errors.company && <p className="error">{errors.company}</p>}
         </label>
 
+        {/* Status dropdown */}
         <label>
           Status
           <select
@@ -107,6 +113,7 @@ function ClientForm({ onAddClient, onCancel }) {
           {errors.status && <p className="error">{errors.status}</p>}
         </label>
 
+        {/* Buttons: submit + cancel */}
         <div className="form-btns">
           <button type="submit">Add Client</button>
           <button type="button" onClick={onCancel}>
