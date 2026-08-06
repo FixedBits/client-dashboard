@@ -1,4 +1,3 @@
-// src/components/ClientDashboard.jsx
 import React, { useState } from "react";
 import ClientForm from "./ClientForm";
 import ClientTable from "./ClientTable";
@@ -54,10 +53,10 @@ function ClientDashboard() {
       )}
 
       {/* Show the form ONLY when showForm is true */}
-      {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />}
+      {showForm && <ClientForm onAddClient={handleAddClient} />}
 
       {/* Always show the table. Pass down the handlers. */}
-      <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
+      <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} onCancel={() => setShowForm(false)} />
     </div>
   );
 }
