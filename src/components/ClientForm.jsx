@@ -21,6 +21,9 @@ function ClientForm({ onAddClient, onCancel }) {
     if (!name.trim()) newErrors.name = "Name is required.";
     if (!email.trim()) newErrors.email = "Email is required.";
     if (!email.includes("@")) newErrors.email = "Email must contain '@'.";
+    if (!email.toLowerCase().endsWith(".com")) {
+      newErrors.email = "Email must end with '.com'.";
+    }
     if (!company.trim()) newErrors.company = "Company is required.";
 
     // Validate dropdown: must not be empty
@@ -78,7 +81,7 @@ function ClientForm({ onAddClient, onCancel }) {
           Email
           <input
             type="text"
-            value={email}
+            value={email.toLowerCase()}
             onChange={(e) => setEmail(e.target.value)} // Update email state
           />
           {errors.email && <p className="error">{errors.email}</p>}
