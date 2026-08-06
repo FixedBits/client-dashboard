@@ -39,12 +39,12 @@ function ClientForm({ onAddClient, onCancel }) {
     const newClient = {
       id: crypto.randomUUID(), // Generate unique ID
       name,
-      email,
+      email: email.toLowerCase(),
       company,
       status,
       createdAt: new Date().toISOString(), // Timestamp for creation
       updatedAt: new Date().toISOString(), // Timestamp for last update
-      actions: ["Delete", "View", "Edit"], // Actions available for this client
+      actions: ["View", "Edit", "Delete"], // Actions available for this client
     };
 
     // Send the new client object to the parent component

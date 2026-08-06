@@ -84,7 +84,7 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
           {actions.map((action) => (
             <button
               key={action}
-              className={action.toLowerCase()} // CSS class: delete/view/edit
+              className={action.toLowerCase()} // CSS class: view/edit/delete
               onClick={() => {
                 // DELETE button → show confirmation modal
                 if (action === "Delete") setShowConfirm(true);
