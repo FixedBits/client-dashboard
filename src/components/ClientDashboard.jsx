@@ -53,10 +53,10 @@ function ClientDashboard() {
       )}
 
       {/* Show the form ONLY when showForm is true */}
-      {showForm && <ClientForm onAddClient={handleAddClient} />}
+      {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />}
 
       {/* Always show the table. Pass down the handlers. */}
-      <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} onCancel={() => setShowForm(false)} />
+      <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
     </div>
   );
 }

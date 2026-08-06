@@ -20,6 +20,7 @@ function ClientForm({ onAddClient, onCancel }) {
     // Validate each field. If invalid, store an error message.
     if (!name.trim()) newErrors.name = "Name is required.";
     if (!email.trim()) newErrors.email = "Email is required.";
+    if (email.includes(" ")) newErrors.email = "Email must not have spaces.";
     if (!email.includes("@")) newErrors.email = "Email must contain '@'.";
     if (!email.toLowerCase().endsWith(".com")) {
       newErrors.email = "Email must end with '.com'.";
