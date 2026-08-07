@@ -55,8 +55,8 @@ Form .error {
   padding: 0.45rem 0.85rem;
   cursor: pointer;
   font-size: 12px;
+  border-radius: 4px;
 }
-
 
 @media (max-width: 768px) {
   .add-client-form {
@@ -71,4 +71,22 @@ Form .error {
     align-self: stretch;
     justify-content: flex-end;
   }
+}
+
+.cancel-btn {
+  background: #6b7280;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+.add-client-btn {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.add-client-btn:hover {
+  background: #2563eb;
 }

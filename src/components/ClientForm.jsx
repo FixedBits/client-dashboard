@@ -109,8 +109,10 @@ function ClientForm({ onAddClient, onCancel }) {
 
         {/* Buttons: submit + cancel */}
         <div className="form-btns">
-          <button type="submit">Add Client</button>
-          <button type="button" onClick={onCancel}>
+          <button type="submit" className="add-client-btn">
+            Add Client
+          </button>
+          <button type="button" className="cancel-btn" onClick={onCancel}>
             Cancel
           </button>
         </div>
