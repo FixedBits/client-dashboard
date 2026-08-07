@@ -1,0 +1,74 @@
+/* =========================================================
+   ADD CLIENT FORM
+========================================================= */
+.add-client-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid rgb(145, 145, 145);
+  max-width: 950px;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+form h2 {
+  margin: 0;
+  white-space: nowrap;
+  align-self: first baseline;
+}
+
+Form .error {
+  color: crimson;
+  font-size: 10px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.add-client-labels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.add-client-labels label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 12px;
+}
+
+.add-client-labels input,
+.add-client-labels select {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+}
+
+.form-btns {
+  margin-top: 0.25rem;
+  display: flex;
+  align-self: flex-end;
+  gap: 1rem;
+}
+
+.form-btns button {
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+  .add-client-form {
+    padding: 0.9rem;
+  }
+
+  .add-client-labels {
+    grid-template-columns: 1fr;
+  }
+
+  .form-btns {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+}
