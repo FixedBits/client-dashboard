@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ClientForm from "./ClientForm";
 import ClientTable from "./ClientTable";
+import SidePanel from "./SidePanel";
 import { initialClients } from "../data/clients";
 import "../styles/ClientDashboard.css";
 
@@ -38,18 +39,19 @@ function ClientDashboard() {
 
   return (
     <div className="dashboard">
-      {/* Add button (hidden when form is open) */}
-      {!showForm && (
-        <button className="add-btn" type="button" onClick={() => setShowForm(true)}>
-          + Add New Client
-        </button>
-      )}
-
-      {/* Form (shown only when toggled) */}
-      {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />}
-
-      {/* Table with handlers */}
-      <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
+      <SidePanel />
+      <div className="dashboard-content">
+        {/* Add button (hidden when form is open) */}
+        {!showForm && (
+          <button className="add-btn" type="button" onClick={() => setShowForm(true)}>
+            + Add New Client
+          </button>
+        )}
+        {/* Form (shown only when toggled) */}
+        {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />}
+        {/* Table with handlers */}
+        <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
+      </div>
     </div>
   );
 }
