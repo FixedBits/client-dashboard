@@ -1,21 +1,40 @@
 .side-panel {
   width: 220px;
-  background: #f7f7f7;
-  padding: 20px;
+  flex-shrink: 0;
+  background: #293960;
   border-right: 1px solid #ddd;
   height: 100vh;
-  flex-shrink: 1;
+  padding: 20px 25px; /* reduce horizontal padding */
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
 }
 
 .panel-title {
-  margin-bottom: 20px;
-  font-size: 18px;
+  white-space: nowrap;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .panel-links li {
-  margin-bottom: 12px;
+  font-size: 18px;
+  margin: 2rem 0;
   cursor: pointer;
 }
 
+.panel-links a svg {
+  margin-right: 8px;
+}
 
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.panel-links {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+}
