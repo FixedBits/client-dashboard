@@ -4,6 +4,7 @@
   padding: 20px;
   border-right: 1px solid #ddd;
   height: 100vh;
+  flex-shrink: 1;
 }
 
 .panel-title {
@@ -16,3 +17,5 @@
   margin-bottom: 12px;
   cursor: pointer;
 }
+
+
