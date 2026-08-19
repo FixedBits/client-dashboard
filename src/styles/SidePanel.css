@@ -2,13 +2,13 @@
    SIDE PANEL CONTAINER
    ========================================================= */
 .side-panel {
-  width: 220px;              
-  flex-shrink: 0;            
-  background: #293960;       
+  width: 220px;
+  flex-shrink: 0;
+  background: #293960;
   border-right: 1px solid #ddd;
-  height: 100vh;             
-  padding: 20px 25px;        
-  box-sizing: border-box;    
+  height: 100vh;
+  padding: 20px 25px;
+  box-sizing: border-box;
   border-radius: 5px 0 0 5px;
 }
 
@@ -16,37 +16,37 @@
    PANEL TITLE
    ========================================================= */
 .panel-title {
-  white-space: nowrap;       
-  color: #fff;               
-  margin-bottom: 3rem;       
-  font-size: 22px;           
-  font-weight: bold;         
+  white-space: nowrap;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 /* =========================================================
    LINK ITEMS
    ========================================================= */
 .panel-links li {
-  font-size: 18px;           
-  margin: 2rem 0;            
-  cursor: pointer;           
+  font-size: 18px;
+  margin: 2rem 0;
+  cursor: pointer;
 }
 
 .panel-links a svg {
-  margin-right: 8px;         
+  margin-right: 8px;
 }
 
 ul li a {
-  color: #fff;               
-  text-decoration: none;     
+  color: #fff;
+  text-decoration: none;
 }
 
 /* =========================================================
    LINK LIST WRAPPER
    ========================================================= */
 .panel-links {
-  list-style: none;          
-  padding: 0;                
-  color: #fff;               
-  text-decoration: none;     
+  list-style: none;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
 }
