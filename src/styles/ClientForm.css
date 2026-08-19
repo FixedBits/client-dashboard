@@ -8,7 +8,7 @@
   border: 1px solid rgb(145, 145, 145);
   border-radius: 8px;
   padding: 1rem;
-  overflow-x: hidden;
+  overflow: hidden;
   flex-shrink: 0;
 }
 

@@ -2,19 +2,35 @@
    DASHBOARD LAYOUT
 ========================================================= */
 .dashboard {
-  display: flex;
+  display: flex;              /* main layout: sidebar + content */
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden;           /* prevents the entire page from scrolling */
 }
 
 .dashboard-content {
-  flex: 1;
+  flex: 1;                    /* fills remaining space next to sidebar */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  min-width: 0;
+
+  /* =========================================================
+     IMPORTANT:
+     Firefox/Chrome has a flexbox bug where "overflow-x: auto"
+     ALSO triggers vertical scrolling inside flex columns.
+     
+     Setting "overflow: hidden" prevents Chrome from adding
+     an extra vertical scrollbar when the form appears or
+     when zooming changes the element height slightly.
+     
+     In short:
+     - overflow also controls scrollbars
+     - hidden = no scrollbars allowed
+     - this fixes the extra scrollbar that was appearing when the Form was in view.
+   ========================================================= */
+  overflow: hidden;           /* ← FIX: blocks unwanted scrollbar */
+
+  min-width: 0;               /* prevents flex children from overflowing horizontally */
 }
 
 .add-btn {
