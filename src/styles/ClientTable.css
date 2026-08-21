@@ -16,13 +16,13 @@
 ========================================================= */
 table {
   width: 100%;
-  min-width: 0;
+  min-width: 700px;
   border-collapse: collapse;
   background: #f9fafb;
   color: #0f172a;
 }
 
-/* ========================================================S=
+/* =========================================================
    TABLE HEADER
 ========================================================= */
 thead th {
@@ -71,15 +71,8 @@ td.actions-cell {
 }
 
 /* =========================================================
-   FORM INPUTS INSIDE ROWS
+   TEXT TRUNCATION (VIEW MODE ONLY)
 ========================================================= */
-.client-row input,
-.client-row select {
-  width: 100%;
-  max-width: 300px;
-}
-
-/* Enable text truncation with ellipsis for Name, Email, Company */
 td[data-label="Name"],
 td[data-label="Company"] {
   max-width: 150px;
@@ -94,8 +87,9 @@ td[data-label="Email"] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 /* =========================================================
-   TABLE BUTTONS (BASE)
+   TABLE BUTTONS
 ========================================================= */
 table button {
   padding: 6px 12px;
