@@ -1,11 +1,14 @@
 import ClientDashboard from "./components/ClientDashboard";
+import { BrowserRouter } from "react-router-dom";
 import "./styles.css";
 
 function App() {
   return (
-    <div className="app">
-      <ClientDashboard />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <ClientDashboard />
+      </div>
+    </BrowserRouter>
   );
 }
 export default App;

@@ -3,6 +3,11 @@ import ClientForm from "./ClientForm";
 import ClientTable from "./ClientTable";
 import SidePanel from "./SidePanel";
 import { initialClients } from "../data/clients";
+import { Routes, Route } from "react-router-dom";
+import DashboardHome from "./DashboardHome";
+import Reports from "./Reports";
+import Settings from "./Settings";
+
 import "../styles/ClientDashboard.css";
 
 function ClientDashboard() {
@@ -41,16 +46,34 @@ function ClientDashboard() {
     <div className="dashboard">
       <SidePanel />
       <div className="dashboard-content">
-        {/* Add button (hidden when form is open) */}
-        {!showForm && (
-          <button className="add-btn" type="button" onClick={() => setShowForm(true)}>
-            + Add New Client
-          </button>
-        )}
-        {/* Form (shown only when toggled) */}
-        {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />}
-        {/* Table with handlers */}
-        <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
+        <Routes>
+          {/* Dashboard Home */}
+          <Route path="/" element={<DashboardHome />} />
+
+          {/* Clients Page */}
+          <Route
+            path="/clients"
+            element={
+              <>
+                {/* Add button (hidden when form is open) */}
+                {!showForm && (
+                  <button className="add-btn" type="button" onClick={() => setShowForm(true)}>
+                    + Add New Client
+                  </button>
+                )}
+                {/* Form (shown only when toggled) */}
+                {showForm && <ClientForm onAddClient={handleAddClient} onCancel={() => setShowForm(false)} />} {/* Table with handlers */}
+                <ClientTable clients={clients} onSave={handleSave} onDelete={handleDelete} />
+              </>
+            }
+          />
+
+          {/* Reports */}
+          <Route path="/reports" element={<Reports />} />
+
+          {/* Settings */}
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
       </div>
     </div>
   );

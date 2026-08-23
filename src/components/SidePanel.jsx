@@ -1,4 +1,5 @@
 import "../styles/SidePanel.css";
+import { NavLink } from "react-router-dom";
 
 /* =========================================================
    ICON IMPORTS
@@ -18,31 +19,31 @@ function SidePanel() {
 
       <ul className="panel-links">
         <li>
-          <a href="#">
+          <NavLink to="/" className="sidebar-link">
             <MdOutlineSpaceDashboard />
             Dashboard
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/clients" className="sidebar-link">
             <FaUsers />
             Clients
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/reports" className="sidebar-link">
             <TbReportSearch />
             Reports
-          </a>
+          </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to="/settings" className="sidebar-link">
             <IoSettingsOutline />
             Settings
-          </a>
+          </NavLink>
         </li>
       </ul>
     </div>
