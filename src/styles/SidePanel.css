@@ -36,17 +36,24 @@
   margin-right: 8px;
 }
 
-ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
 /* =========================================================
    LINK LIST WRAPPER
    ========================================================= */
 .panel-links {
   list-style: none;
   padding: 0;
+  text-decoration: none;
+}
+.sidebar-link {
+  padding: 10px 14px;
+  display: block;
   color: #fff;
   text-decoration: none;
+  border-radius: 6px;
+}
+
+.sidebar-link.active {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: 600;
 }
