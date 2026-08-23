@@ -19,28 +19,28 @@ function SidePanel() {
 
       <ul className="panel-links">
         <li>
-          <NavLink to="/" className="sidebar-link">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}>
             <MdOutlineSpaceDashboard />
             Dashboard
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/clients" className="sidebar-link">
+          <NavLink to="/clients" className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}>
             <FaUsers />
             Clients
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/reports" className="sidebar-link">
+          <NavLink to="/reports" className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}>
             <TbReportSearch />
             Reports
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/settings" className="sidebar-link">
+          <NavLink to="/settings" className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}>
             <IoSettingsOutline />
             Settings
           </NavLink>
