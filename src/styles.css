@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 /* =========================================================
    GLOBAL RESET
 ========================================================= */
@@ -8,9 +10,15 @@
 /* =========================================================
    PAGE LAYOUT
 ========================================================= */
+
+html,
 body {
   font-family: "Inter", sans-serif;
-  background: #f5f5f5;
+  font-optical-sizing: auto;
+}
+
+body {
+  background: #f5f5f5;                                                            
   margin: 0;
 }
 
