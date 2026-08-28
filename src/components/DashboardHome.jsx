@@ -5,7 +5,8 @@ import ActivityFeed from "../components/ActivityFeed/ActivityFeed";
 import RevenueTable from "../components/RevenueTable/RevenueTable";
 import dashboardData from "../data/dashboardData";
 
-function DashboardHome() {
+// Dashboard Home Component
+function DashboardHome() { 
   return (
     <div className="dashboard-home">
       {/* KPI ROW */}
