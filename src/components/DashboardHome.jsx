@@ -6,7 +6,29 @@ import RevenueTable from "../components/RevenueTable/RevenueTable";
 import dashboardData from "../data/dashboardData";
 
 function DashboardHome() {
-  return <h1>Dashboard Home</h1>;
-  <div></div>;
+  return (
+    <div className="dashboard-home">
+      {/* KPI ROW */}
+      <div className="kpi-row">
+        <KPICard data={dashboardData.kpis.totalClients} />
+        <KPICard data={dashboardData.kpis.activeClients} />
+        <KPICard data={dashboardData.kpis.newClients} />
+        <KPICard data={dashboardData.kpis.revenue} />
+      </div>
+
+      {/* CHARTS ROW */}
+      <div className="charts-row">
+        <LineChart data={dashboardData.monthlyPerformance} />
+        <PieChart data={dashboardData.conversionRate} />
+      </div>
+
+      {/* BOTTOM ROW */}
+      <div className="bottom-row">
+        <ActivityFeed items={dashboardData.activities} />
+        <RevenueTable rows={dashboardData.revenueTable} />
+      </div>
+    </div>
+  );
 }
+
 export default DashboardHome;
