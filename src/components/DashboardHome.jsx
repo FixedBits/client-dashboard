@@ -3,10 +3,10 @@ import LineChart from "../components/LineChart/LineChart";
 import PieChart from "../components/PieChart/PieChart";
 import ActivityFeed from "../components/ActivityFeed/ActivityFeed";
 import RevenueTable from "../components/RevenueTable/RevenueTable";
-import dashboardData from "../data/dashboardData";
+import { dashboardData } from "../data/dashboardData";
 
 // Dashboard Home Component
-function DashboardHome() { 
+function DashboardHome() {
   return (
     <div className="dashboard-home">
       {/* KPI ROW */}
