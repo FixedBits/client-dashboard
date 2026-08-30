@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import ClientForm from "./ClientForm";
-import ClientTable from "./ClientTable";
-import SidePanel from "./SidePanel";
-import { initialClients } from "../data/clients";
-import { Routes, Route } from "react-router-dom";
-import DashboardHome from "./DashboardHome";
-import Reports from "./Reports";
-import Settings from "./Settings";
+import React, {useState} from 'react';
+import ClientForm from './ClientForm';
+import ClientTable from './ClientTable';
+import SidePanel from './SidePanel';
+import {initialClients} from '../data/clients';
+import {Routes, Route} from 'react-router-dom';
+import DashboardHome from './DashboardHome';
+import Reports from './Reports';
+import Settings from './Settings';
 
-import "../styles/ClientDashboard.css";
+import '../styles/ClientDashboard.css';
 
 function ClientDashboard() {
   // Client list state
