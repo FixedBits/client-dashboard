@@ -1,6 +1,4 @@
-/* =========================================================
-   ADD CLIENT FORM
-========================================================= */
+/* Main form container layout */
 .add-client-form {
   display: flex;
   flex-direction: column;
@@ -13,12 +11,14 @@
   flex-shrink: 0;
 }
 
+/* Form title styling */
 form h2 {
   margin: 0;
   white-space: nowrap;
   align-self: first baseline;
 }
 
+/* Error message styling */
 Form .error {
   color: crimson;
   font-size: 10px;
@@ -26,12 +26,14 @@ Form .error {
   line-height: 1.5;
 }
 
+/* Grid layout for labels and inputs */
 .add-client-labels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
+/* Label + input vertical stack */
 .add-client-labels label {
   display: flex;
   flex-direction: column;
@@ -39,12 +41,14 @@ Form .error {
   font-size: 12px;
 }
 
+/* Input and select field styling */
 .add-client-labels input,
 .add-client-labels select {
   width: 100%;
   padding: 0.55rem 0.7rem;
 }
 
+/* Button row layout */
 .form-btns {
   margin-top: 0.25rem;
   display: flex;
@@ -52,6 +56,7 @@ Form .error {
   gap: 1rem;
 }
 
+/* Button base styling */
 .form-btns button {
   padding: 0.45rem 0.85rem;
   cursor: pointer;
@@ -59,6 +64,7 @@ Form .error {
   border-radius: 4px;
 }
 
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .add-client-form {
     padding: 0.9rem;
@@ -74,20 +80,24 @@ Form .error {
   }
 }
 
+/* Cancel button colors */
 .cancel-btn {
   background: #6b7280;
   color: #fff;
 }
 
+/* Cancel hover */
 .cancel-btn:hover {
   background: #4b5563;
 }
 
+/* Add client button colors */
 .add-client-btn {
   background: #3b82f6;
   color: #fff;
 }
 
+/* Add client hover */
 .add-client-btn:hover {
   background: #2563eb;
 }

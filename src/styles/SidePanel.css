@@ -1,6 +1,4 @@
-/* =========================================================
-   SIDE PANEL CONTAINER
-   ========================================================= */
+/* Side panel container layout + background */
 .side-panel {
   width: 220px;
   flex-shrink: 0;
@@ -12,9 +10,7 @@
   border-radius: 5px 0 0 5px;
 }
 
-/* =========================================================
-   PANEL TITLE
-   ========================================================= */
+/* Title styling inside the side panel */
 .panel-title {
   white-space: nowrap;
   color: #fff;
@@ -23,9 +19,7 @@
   font-weight: bold;
 }
 
-/* =========================================================
-   LINK ITEMS
-   ========================================================= */
+/* Individual link item spacing + cursor */
 .panel-links li {
   font-size: 18px;
   margin: 2rem 0;
@@ -36,14 +30,14 @@
   margin-right: 8px;
 }
 
-/* =========================================================
-   LINK LIST WRAPPER
-   ========================================================= */
+/* Wrapper for the link list */
 .panel-links {
   list-style: none;
   padding: 0;
   text-decoration: none;
 }
+
+/* Base styling for each sidebar link */
 .sidebar-link {
   padding: 10px 14px;
   display: block;
@@ -52,6 +46,7 @@
   border-radius: 6px;
 }
 
+/* Active link highlight */
 .sidebar-link.active {
   background: #e0e7ff;
   color: #1e3a8a;
