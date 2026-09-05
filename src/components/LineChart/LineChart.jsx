@@ -1,17 +1,17 @@
-import {LineChart as ReLineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
-import {PiUsersThreeFill} from 'react-icons/pi';
+import { LineChart as ReLineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+import { PiUsersThreeFill } from "react-icons/pi";
 
-function LineChart({data}) {
+function LineChart({ data }) {
   // Convert your simple values array → chart‑friendly objects
   const chartData = data.values.map((value, index) => ({
-    index,
     value,
+    index,
   }));
   return (
     <div className="line-chart-card">
       <PiUsersThreeFill />
       <h3>{data.label}</h3>
-      <p className="line-chart-values"> {data.values.join(', ')} </p>
+      <p className="line-chart-values"> {data.values.join(", ")} </p>
       <ReLineChart width={500} height={300} data={chartData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="index" />
