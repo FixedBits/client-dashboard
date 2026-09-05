@@ -1,7 +1,7 @@
 export const dashboardData = {
   kpis: {
     totalClients: { label: "Total Clients", value: 256 },
-    activeClients: { label: "Total Clients", value: 135 },
+    activeClients: { label: "Active Clients", value: 135 },
     newClients: { label: "New Clients", value: 45 },
     revenue: { label: "Revenue", value: 12500 },
   },
@@ -13,8 +13,8 @@ export const dashboardData = {
 
   conversionRate: {
     label: "Conversion Rate",
-    converted: 18,
-    notConverted: 82,
+    converted: 32,
+    notConverted: 68,
   },
   activities: [
     { message: "Added new client: Sara Johnson", time: "2h ago" },
@@ -24,8 +24,8 @@ export const dashboardData = {
 
   revenueTable: [
     { month: "January", revenue: 4200, clientsAdded: 8, growth: "8%" },
-    { month: "January", revenue: 4200, clientsAdded: 8, growth: "8%" },
-    { month: "January", revenue: 4200, clientsAdded: 8, growth: "8%" },
-    { month: "January", revenue: 4200, clientsAdded: 8, growth: "8%" },
+    { month: "February", revenue: 6100, clientsAdded: 7, growth: "12%" },
+    { month: "March", revenue: 8500, clientsAdded: 10, growth: "15%" },
+    { month: "April", revenue: 2900, clientsAdded: 9, growth: "10%" },
   ],
 };
