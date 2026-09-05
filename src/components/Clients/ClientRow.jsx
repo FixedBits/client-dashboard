@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import "../styles/ClientRow.css";
-import "../styles/Modal.css";
+import "../../styles/ClientRow.css";
+import "../../styles/Modal.css";
 
 // Single table row with edit/delete/view functionality
 function ClientRow({ name, email, company, status, actions, createdAt, updatedAt, onSave, onDelete }) {

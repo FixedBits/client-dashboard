@@ -1,8 +1,8 @@
-import KPICard from "../components/KPICard/KPICard";
-import LineChart from "../components/LineChart/LineChart";
-import PieChart from "../components/PieChart/PieChart";
-import ActivityFeed from "../components/ActivityFeed/ActivityFeed";
-import RevenueTable from "../components/RevenueTable/RevenueTable";
+import KPICard from "./Dashboard/KPICard/KPICard";
+import LineChart from "./Dashboard/LineChart/LineChart";
+import PieChart from "./Dashboard/PieChart/PieChart";
+import ActivityFeed from "./Dashboard/ActivityFeed/ActivityFeed";
+import RevenueTable from "./Dashboard/RevenueTable/RevenueTable";
 import { dashboardData } from "../data/dashboardData";
 
 // Dashboard Home Component

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ClientTable.css";
+import "../../styles/ClientTable.css";
 import ClientRow from "./ClientRow";
 
 // Table displays all clients with edit/delete handlers

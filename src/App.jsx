@@ -1,4 +1,4 @@
-import ClientDashboard from "./components/ClientDashboard";
+import ClientDashboard from "./components/Clients/ClientDashboard";
 import { BrowserRouter } from "react-router-dom";
 import "./styles.css";
 

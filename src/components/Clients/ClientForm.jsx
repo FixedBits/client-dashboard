@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/ClientForm.css";
+import "../../styles/ClientForm.css";
 
 // Form for adding new clients
 function ClientForm({ onAddClient, onCancel }) {
