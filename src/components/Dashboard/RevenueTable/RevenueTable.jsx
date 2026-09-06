@@ -1,9 +1,6 @@
-import { PiUsersThreeFill } from "react-icons/pi";
-
 function RevenueTable({ rows }) {
   return (
     <div className="revenue-table">
-      <PiUsersThreeFill />
       <h3>Revenue Table</h3>
       <table>
         <thead>
