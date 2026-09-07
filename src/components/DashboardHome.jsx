@@ -20,7 +20,7 @@ function DashboardHome() {
         <KPICard data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
         <KPICard data={dashboardData.kpis.activeClients} icon={<PiCheckCircleFill />} />
         <KPICard data={dashboardData.kpis.newClients} icon={<PiPlusCircleFill />} />
-        <KPICard data={dashboardData.kpis.revenue} icon={<PiCurrencyDollarFill />} />
+        <KPICard data={dashboardData.kpis.revenue} icon={<PiCurrencyDollarFill />} prefix="$" />
       </div>
 
       {/* CHARTS ROW */}
