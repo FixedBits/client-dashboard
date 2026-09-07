@@ -6,13 +6,13 @@ import { PiUsersThreeFill } from "react-icons/pi";
 import { PiChartPieFill } from "react-icons/pi";
 import { PiTrendUpFill } from "react-icons/pi";
 
-function StatsRow({ data }) {
+function StatsRow({ metrics }) {
   return (
     <div className="stats-row">
-      <KPICard label="Total Revenue" value={`$${data.totalRevenue}`} icon={<PiCurrencyDollarFill />} />
-      <KPICard label="New Clients" value={data.newClients} icon={<PiUsersThreeFill />} />
-      <KPICard label="Conversion Rate" value={`${data.conversionRate}%`} icon={<PiChartPieFill />} />
-      <KPICard label="Average Growth" value={`${data.averageGrowth}%`} icon={<PiTrendUpFill />} />
+      <KPICard data={metrics.totalRevenue} icon={<PiCurrencyDollarFill />} prefix="$" />
+      <KPICard data={metrics.newClients} icon={<PiUsersThreeFill />} />
+      <KPICard data={metrics.conversionRate} icon={<PiChartPieFill />} suffix="%" />
+      <KPICard data={metrics.averageGrowth} icon={<PiTrendUpFill />} suffix="%" />
     </div>
   );
 }
