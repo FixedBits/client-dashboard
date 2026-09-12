@@ -1,12 +1,10 @@
-import { PieChart as RePieChart, Pie, Tooltip, Legend, Sector } from "recharts";
+import { PieChart as RePieChart, Pie, Tooltip, Legend, Sector, DefaultLegendContent } from "recharts";
 
 function PieChart({ data }) {
-  // Chart-friendly objects from the converted/notConverted values
   const chartData = [
     { name: "Converted", value: data.converted },
     { name: "Not Converted", value: data.notConverted },
   ];
-
   const COLORS = ["#4CAF50", "#F44336"];
 
   return (
@@ -19,15 +17,22 @@ function PieChart({ data }) {
           nameKey="name"
           outerRadius={90}
           label
-          // Using Recharts Sector component to handle the mathematical arc paths automatically
-          shape={(props) => {
-            const { index } = props;
-            return <Sector {...props} fill={COLORS[index]} />;
+          shape={(slice) => {
+            const { index } = slice;
+            return <Sector {...slice} fill={COLORS[index]} />;
           }}
         />
-
         <Tooltip />
-        <Legend />
+        <Legend
+          iconType="square"
+          content={(props) => {
+            const payload = chartData.map((entry, index) => ({
+              value: entry.name,
+              color: COLORS[index],
+            }));
+            return <DefaultLegendContent {...props} payload={payload} />;
+          }}
+        />
       </RePieChart>
     </div>
   );
