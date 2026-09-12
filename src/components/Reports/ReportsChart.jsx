@@ -10,14 +10,14 @@ function ReportsChart({ chartData }) {
       <ReBarChart width={600} height={300} data={chartData}>
         <CartesianGrid />
 
-        {/* Separate Y axes since newClients and revenue are on very
-            different scales (clients left, revenue right). */}
+        {/* newClients and revenue are on very different scales, so each Bar
+    is tied to its own YAxis via yAxisId (left for clients, right for
+    revenue) rather than sharing one axis. */}
         <Bar dataKey="newClients" fill="#2563eb" yAxisId="clientsAxis" />
         <Bar dataKey="revenue" fill="#16a34a" yAxisId="revenueAxis" />
-
         <XAxis dataKey="month" />
-        <YAxis yAxisId="clientsAxis" orientation="left" />
-        <YAxis yAxisId="revenueAxis" orientation="right" />
+        <YAxis yAxisId="clientsAxis" orientation="left" domain={[0, "dataMax + 4"]} />
+        <YAxis yAxisId="revenueAxis" orientation="right" domain={[0, "dataMax + 1000"]} />
         <Tooltip />
         <Legend />
       </ReBarChart>
