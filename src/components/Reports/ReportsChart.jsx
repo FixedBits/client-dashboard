@@ -7,7 +7,7 @@ function ReportsChart({ chartData }) {
     <div>
       <h3>Revenue & Client Growth</h3>
 
-      <ReBarChart width={600} height={300} data={chartData}>
+      <ReBarChart width={700} height={300} data={chartData}>
         <CartesianGrid />
 
         {/* newClients and revenue are on very different scales, so each Bar
@@ -16,8 +16,8 @@ function ReportsChart({ chartData }) {
         <Bar dataKey="newClients" fill="#2563eb" yAxisId="clientsAxis" name="New Clients" />
         <Bar dataKey="revenue" fill="#16a34a" yAxisId="revenueAxis" name="Revenue" />
         <XAxis dataKey="month" />
-        <YAxis yAxisId="clientsAxis" orientation="left" domain={[0, "dataMax + 4"]} />
-        <YAxis yAxisId="revenueAxis" orientation="right" domain={[0, "dataMax + 1000"]} />
+        <YAxis yAxisId="clientsAxis" orientation="left" domain={[0, "dataMax + 12"]} />
+        <YAxis yAxisId="revenueAxis" orientation="right" domain={[0, "dataMax + 3000"]} />
         <Tooltip />
         <Legend />
       </ReBarChart>
