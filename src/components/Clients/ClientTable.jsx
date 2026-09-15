@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/ClientTable.css";
 import ClientRow from "./ClientRow";
 
