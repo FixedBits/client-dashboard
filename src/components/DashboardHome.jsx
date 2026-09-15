@@ -25,7 +25,7 @@ function DashboardHome() {
 
       {/* CHARTS ROW */}
       <div className="charts-row">
-        <LineChart data={dashboardData.monthlyPerformance} />
+        <LineChart data={dashboardData.revenueTable} />
         <PieChart data={dashboardData.conversionRate} />
       </div>
 
