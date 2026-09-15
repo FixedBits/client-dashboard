@@ -1,10 +1,11 @@
 /* Side panel container layout + background */
 .side-panel {
+  position: sticky;
   width: 220px;
   flex-shrink: 0;
   background: #293960;
   border-right: 1px solid #ddd;
-  height: 100vh;
+  height: auto;
   padding: 20px 25px;
   box-sizing: border-box;
   border-radius: 5px 0 0 5px;
