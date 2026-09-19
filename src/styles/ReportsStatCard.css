@@ -1,3 +1,4 @@
+/* Main container for the trend analysis card - white background, rounded corners, subtle shadow like the other dashboard cards */
 .trend-analysis-card {
   background-color: #fff;
   border-radius: 8px;
@@ -7,33 +8,39 @@
   max-width: 100%;
 }
 
+/* Header/title area of the card - separated from the content below by a bottom border */
 .trend-analysis-title {
   border-bottom: 1px solid #8b8b8b8b;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
+/* Each row of stats - lays the title and value side by side using flexbox */
 .stat-row {
   display: flex;
   justify-content: space-between;
 }
 
+/* Label/name for a given stat within a row */
 .stat-row .stat-title {
   font-size: 1.1rem;
   color: rgb(5, 37, 85);
 }
 
+/* Adds a divider line between stat rows, but skips it on the last row so there's no trailing border */
 .stat-row:not(:last-child) {
   border-bottom: 1px solid #8b8b8b8b;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
+/* The main numeric/text value for a stat */
 .stat-value {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
+/* Highlighted comparison value (e.g. % change vs last period) - green to signal a positive trend */
 .stat-compare-value {
   color: #008d1c;
   font-weight: bold;
