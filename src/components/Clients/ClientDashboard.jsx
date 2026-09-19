@@ -18,6 +18,9 @@ function ClientDashboard() {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
 
+  function handleReset() {
+    setClients(initialClients);
+  }
   // Form visibility state
   const [showForm, setShowForm] = useState(false);
 
@@ -77,7 +80,7 @@ function ClientDashboard() {
           <Route path="/reports" element={<Reports />} />
 
           {/* Settings */}
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/settings" element={<Settings onReset={handleReset} />} />
         </Routes>
       </div>
     </div>
