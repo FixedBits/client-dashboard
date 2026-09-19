@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ClientForm from "./ClientForm";
 import ClientTable from "./ClientTable";
 import SidePanel from "../SidePanel";
@@ -12,7 +12,12 @@ import "../../styles/ClientDashboard.css";
 
 function ClientDashboard() {
   // Client list state
-  const [clients, setClients] = useState(initialClients);
+  const [clients, setClients] = useState(localStorage.getItem("clients") ? JSON.parse(localStorage.getItem("clients")) : initialClients);
+
+  useEffect(() => {
+    localStorage.setItem("clients", JSON.stringify(clients));
+  }, [clients]);
+
   // Form visibility state
   const [showForm, setShowForm] = useState(false);
 
