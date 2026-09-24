@@ -27,3 +27,9 @@
 .add-btn:hover {
   background: #1d4ed8;
 }
+
+.dashboard.dark-mode {
+  background: rgb(44, 43, 43);
+  color: rgb(242, 241, 241);
+  min-height: 100vh;
+}

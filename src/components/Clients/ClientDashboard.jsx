@@ -14,6 +14,8 @@ function ClientDashboard() {
   // Client list state
   const [clients, setClients] = useState(localStorage.getItem("clients") ? JSON.parse(localStorage.getItem("clients")) : initialClients);
 
+  const [darkMode, setDarkMode] = useState(false);
+
   useEffect(() => {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
@@ -51,7 +53,7 @@ function ClientDashboard() {
   }
 
   return (
-    <div className="dashboard">
+    <div className={darkMode ? "dashboard dark-mode" : "dashboard"}>
       <SidePanel />
       <div className="dashboard-content">
         <Routes>
@@ -80,7 +82,7 @@ function ClientDashboard() {
           <Route path="/reports" element={<Reports />} />
 
           {/* Settings */}
-          <Route path="/settings" element={<Settings onReset={handleReset} />} />
+          <Route path="/settings" element={<Settings onReset={handleReset} darkMode={darkMode} setDarkMode={setDarkMode} />} />
         </Routes>
       </div>
     </div>

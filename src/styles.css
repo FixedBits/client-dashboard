@@ -26,7 +26,6 @@ body {
 
 .app {
   margin: 0 auto;
-  padding: 1rem; /* keep padding to keep away from edges */
   overflow-x: auto;
 }
 
