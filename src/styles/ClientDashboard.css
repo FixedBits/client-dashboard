@@ -14,6 +14,7 @@
   min-width: 0; /* prevents flex children from overflowing horizontally */
 }
 
+/* "Add" button */
 .add-btn {
   padding: 9px 7px;
   background: #3860d6;
@@ -28,6 +29,7 @@
   background: #1d4ed8;
 }
 
+/* Dark mode styling */
 .dashboard.dark-mode {
   background: rgb(44, 43, 43);
   color: rgb(242, 241, 241);
