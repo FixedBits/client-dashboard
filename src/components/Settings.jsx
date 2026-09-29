@@ -1,16 +1,23 @@
 // Settings.jsx
 // Settings panel for the CRM Dashboard — lets the user reset the client list
 // and toggle between light/dark mode.
-function Settings({ onReset, darkMode, setDarkMode }) {
+import '../styles/Settings.css';
+
+function Settings({onReset, darkMode, setDarkMode}) {
   return (
     <>
       <h1>Settings Page</h1>
 
-      {/* Clears all clients from the list via the parent-provided handler */}
-      <button onClick={onReset}>Reset Client List</button>
-
-      {/* Flips the darkMode boolean; parent component controls the actual theme */}
-      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
+      <div className='settings-btns-container'>
+        {/* Clears all clients from the list via the parent-provided handler */}
+        <button className="settings-reset-btn" onClick={onReset}>
+          Reset Client List
+        </button>
+        {/* Flips the darkMode boolean; parent component controls the actual theme */}
+        <button className="settings-dark-mode-btn" onClick={() => setDarkMode(!darkMode)}>
+          Toggle Dark Mode
+        </button>
+      </div>
     </>
   );
 }

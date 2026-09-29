@@ -1,0 +1,27 @@
+.settings-btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.settings-reset-btn,
+.settings-dark-mode-btn {
+  min-width: 20%;
+  background: rgb(114, 113, 113);
+  color: aliceblue;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: hidden;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.settings-reset-btn:hover,
+.settings-dark-mode-btn:hover {
+  background: rgb(71, 71, 71);
+  transform: scale(0.98);
+}
