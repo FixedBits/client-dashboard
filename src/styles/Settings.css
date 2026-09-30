@@ -25,3 +25,10 @@
   background: rgb(71, 71, 71);
   transform: scale(0.98);
 }
+
+
+.settings-reset-btn:active,
+.settings-dark-mode-btn:active {
+  background: rgb(49, 49, 49);
+  transform: scale(0.95);
+}

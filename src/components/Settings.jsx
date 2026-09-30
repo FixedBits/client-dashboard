@@ -15,7 +15,7 @@ function Settings({onReset, darkMode, setDarkMode}) {
         </button>
         {/* Flips the darkMode boolean; parent component controls the actual theme */}
         <button className="settings-dark-mode-btn" onClick={() => setDarkMode(!darkMode)}>
-          Toggle Dark Mode
+          {darkMode ? "Toggle Light Mode":"Toggle Dark Mode"}
         </button>
       </div>
     </>
