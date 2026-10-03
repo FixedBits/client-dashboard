@@ -8,7 +8,7 @@ function KPICard({ data, label, value, icon, prefix, suffix }) {
     <div className="kpi-card">
       {icon ? <div className="kpi-icon">{icon}</div> : <PiQuestion />}
       <div className="kpi-content">
-        <h3>{cardLabel}</h3>
+        <h3 className="card-title">{cardLabel}</h3>
         <p className="kpi-value">{cardValue}</p>
       </div>
     </div>
