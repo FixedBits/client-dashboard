@@ -18,8 +18,8 @@ const monthNames = {
 function ReportsTable({ rows }) {
   return (
     <>
-      <h3>Report Table</h3>
       <div className="reports-table-card">
+        <h3>Report Table</h3>
         <table>
           <thead>
             <tr>
