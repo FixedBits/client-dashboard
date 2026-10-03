@@ -6,17 +6,18 @@ import RevenueTable from "./Dashboard/RevenueTable/RevenueTable";
 import { dashboardData } from "../data/dashboardData";
 
 // Dashboard Icons
-import { PiCurrencyDollarFill } from "react-icons/pi";
 import { PiUsersThreeFill } from "react-icons/pi";
 import { PiCheckCircleFill } from "react-icons/pi";
 import { PiPlusCircleFill } from "react-icons/pi";
+import { PiCurrencyDollarFill } from "react-icons/pi";
 
 // Dashboard Home Component
 function DashboardHome() {
   return (
     <div className="dashboard-home">
+      <h1>Dashboard</h1>
       {/* KPI ROW */}
-      <div className="kpi-row">
+      <div className="stats-row">
         <KPICard data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
         <KPICard data={dashboardData.kpis.activeClients} icon={<PiCheckCircleFill />} />
         <KPICard data={dashboardData.kpis.newClients} icon={<PiPlusCircleFill />} />
