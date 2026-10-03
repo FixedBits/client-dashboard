@@ -1,1 +1,38 @@
 /* Styling for KPICard and StatsRow components */
+.card-container {
+  /* test border */
+  border: red solid 1px;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1.2em;
+  width: 300px;
+  flex: 1;
+  min-width: 240px; /* Don' get squished smaller than this */
+  max-width: 320px; /* Don't stretch too wide on huge monitors */
+}
+.card-content {
+  display: flex;
+  gap: 1rem;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.icon-title {
+  font-size: 3em;
+}
+
+.card-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-value {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
