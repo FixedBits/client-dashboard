@@ -3,7 +3,7 @@ export const dashboardData = {
     totalClients: { label: "Total Clients", value: 256 },
     activeClients: { label: "Active Clients", value: 135 },
     newClients: { label: "New Clients", value: 45 },
-    revenue: { label: "Revenue", value: 12500 },
+    revenue: { label: "Revenue", value: 78200 },
   },
 
   monthlyPerformance: {
