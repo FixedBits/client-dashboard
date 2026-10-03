@@ -30,6 +30,17 @@
   background: #1d4ed8;
 }
 
+.charts-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* Dark mode styling */
 .dashboard.dark-mode {
   background: rgb(44, 43, 43);
