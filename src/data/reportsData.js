@@ -1,9 +1,9 @@
 export const reportsData = {
   stats: {
-    totalRevenue: { label: "Total Revenue", value: 12500 },
-    newClients: { label: "New Clients", value: 25 },
-    conversionRate: { label: "Conversion Rate", value: 15 },
-    averageGrowth: { label: "Average Growth", value: 12 },
+    totalRevenue: { label: "Total Revenue", value: 4200 },
+    newClients: { label: "New Clients", value: 8 },
+    conversionRate: { label: "Conversion Rate", value: 18 },
+    averageGrowth: { label: "Average Growth", value: 10 },
   },
 
   chart: [
