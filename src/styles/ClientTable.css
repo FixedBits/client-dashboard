@@ -152,6 +152,10 @@ table button.view:hover {
   cursor: default;
 }
 
+.client-list-title {
+  color: var(--page-title);
+}
+
 .status-active {
   background: #dcfce7;
   color: #059669;

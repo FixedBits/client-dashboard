@@ -7,6 +7,10 @@
   padding: 2rem;
 }
 
+.settings-page-title {
+  color: var(--page-title);
+}
+
 .settings-reset-btn,
 .settings-dark-mode-btn {
   min-width: 20%;
@@ -25,7 +29,6 @@
   background: rgb(71, 71, 71);
   transform: scale(0.98);
 }
-
 
 .settings-reset-btn:active,
 .settings-dark-mode-btn:active {

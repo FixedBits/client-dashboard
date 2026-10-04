@@ -31,6 +31,10 @@
   gap: 0.5rem;
 }
 
+.card-title {
+  color: var(--card-title);
+}
+
 .card-value {
   font-size: 2em;
   font-weight: bold;

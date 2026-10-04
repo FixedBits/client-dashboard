@@ -1,10 +1,10 @@
 /* Side panel container layout + background */
 .side-panel {
   position: sticky;
-  width: 220px;
+  width: 300px;
   flex-shrink: 0;
-  background: #293960;
-  border-right: 1px solid #ddd;
+  background: #23365d;
+  border-right: 2px solid #00094a;
   height: auto;
   padding: 20px 25px;
   box-sizing: border-box;
@@ -52,4 +52,9 @@
   background: #e0e7ff;
   color: #1e3a8a;
   font-weight: 600;
+}
+
+.dashboard.dark-mode .side-panel {
+  background: #04204c;
+  color: #dddfea;
 }

@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.dashboard-title {
+  color: var(--page-title);
+}
+
 .dashboard-content {
   flex: 1; /* fills remaining space next to sidebar */
   padding: 20px;
@@ -43,6 +47,6 @@
 
 /* Dark mode styling */
 .dashboard.dark-mode {
-  background: rgb(44, 43, 43);
-  color: rgb(242, 241, 241);
+  background: var(--dashboard-bg);
+  color: var(--dashboard-text);
 }
