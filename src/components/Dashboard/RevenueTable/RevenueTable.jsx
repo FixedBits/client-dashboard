@@ -1,7 +1,8 @@
+import "../../../styles/RevenueTable.css";
 function RevenueTable({ rows }) {
   return (
     <div className="revenue-table">
-      <h3>Revenue Table</h3>
+      <h3 className="revenue-table-title">Revenue Table</h3>
       <table>
         <thead>
           <tr>

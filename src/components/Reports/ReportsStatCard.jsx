@@ -1,4 +1,5 @@
 import "../../styles/ReportsStatCard.css";
+
 function calculateRevenuePerClient(totalRevenue, totalClients) {
   if (totalClients == 0) {
     return 0;
@@ -21,18 +22,18 @@ function ReportsStatCard({ totalRevenue, totalClients }) {
             </span>
           </li>
           <li className="stat-row">
-            <strong className="stat-title">Retention Rate</strong>{" "}
+            <strong className="stat-title">Retention Rate</strong>
             <span className="stat-group">
               <span className="stat-value">82% </span>
               <span>up from</span> <span className="stat-compare-value">78%</span>
             </span>
           </li>
           <li className="stat-row">
-            <strong className="stat-title">Lead Conversion</strong>{" "}
+            <strong className="stat-title">Lead Conversion</strong>
             <span className="stat-group">
               <span className="stat-value">23% </span>
               <span>up from</span>
-              <span className="stat-compare-value"> 20%</span>{" "}
+              <span className="stat-compare-value"> 20%</span>
             </span>
           </li>
         </ul>

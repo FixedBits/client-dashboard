@@ -6,7 +6,7 @@ import '../styles/Settings.css';
 function Settings({onReset, darkMode, setDarkMode}) {
   return (
     <>
-      <h1>Settings Page</h1>
+      <h1 className='settings-page-title'>Settings Page</h1>
 
       <div className='settings-btns-container'>
         {/* Clears all clients from the list via the parent-provided handler */}

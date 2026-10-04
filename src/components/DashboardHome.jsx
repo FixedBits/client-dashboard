@@ -15,7 +15,7 @@ import { PiCurrencyDollarFill } from "react-icons/pi";
 function DashboardHome() {
   return (
     <div className="dashboard-home">
-      <h1>Dashboard</h1>
+      <h1 className="dashboard-title">Dashboard</h1>
       {/* KPI ROW */}
       <div className="stats-row">
         <KPICard data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
