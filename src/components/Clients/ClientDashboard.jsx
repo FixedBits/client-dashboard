@@ -14,11 +14,15 @@ function ClientDashboard() {
   // Client list state
   const [clients, setClients] = useState(localStorage.getItem("clients") ? JSON.parse(localStorage.getItem("clients")) : initialClients);
 
-  const [darkMode, setDarkMode] = useState(false);
-
   useEffect(() => {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
+
+  const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") ? JSON.parse(localStorage.getItem("darkMode")) : false);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
 
   function handleReset() {
     setClients(initialClients);
