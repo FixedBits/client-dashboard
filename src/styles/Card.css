@@ -21,6 +21,10 @@
   gap: 1rem;
 }
 
+.total-clients {
+  background: blue;
+}
+
 .icon-title {
   font-size: 3em;
 }

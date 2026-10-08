@@ -18,7 +18,7 @@ function DashboardHome() {
       <h1 className="dashboard-title">Dashboard</h1>
       {/* KPI ROW */}
       <div className="stats-row">
-        <KPICard data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
+        <KPICard className="total-clients"data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
         <KPICard data={dashboardData.kpis.activeClients} icon={<PiCheckCircleFill />} />
         <KPICard data={dashboardData.kpis.newClients} icon={<PiPlusCircleFill />} />
         <KPICard data={dashboardData.kpis.revenue} icon={<PiCurrencyDollarFill />} prefix="$" />
