@@ -1,44 +1,51 @@
 /* Styling for KPICard and StatsRow components */
 .card-container {
-  /* test border */
-  border: red solid 1px;
+  border: red solid 1px; /* test border — temporary, remove once per-card colors are added */
   border-radius: 5px;
   margin: 1rem;
   padding: 1.2em;
   width: 300px;
   flex: 1;
-  min-width: 240px; /* Don' get squished smaller than this */
+  min-width: 240px; /* Don't get squished smaller than this */
   max-width: 320px; /* Don't stretch too wide on huge monitors */
 }
+
+/* Layout for the icon + text inside each card */
 .card-content {
   display: flex;
   gap: 1rem;
 }
 
+/* Row holding all KPI cards across the top of the page */
 .stats-row {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
 
+/* Per-card styling override, applied via the className prop */
 .total-clients {
   background: blue;
 }
 
+/* Icon styling within the card */
 .icon-title {
   font-size: 3em;
 }
 
+/* Layout for the card's text content */
 .card-text-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Card title styling, theme-aware via CSS variable */
 .card-title {
   color: var(--card-title);
 }
 
+/* Card value styling */
 .card-value {
   font-size: 2em;
   font-weight: bold;
