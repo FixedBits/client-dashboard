@@ -83,10 +83,10 @@
 }
 
 .revenue-card .card-title {
-  color: var(--revenue-card-title, black);
+  color: var(--revenue-card-title, #121212);
 }
 .revenue-card .card-value {
-  color: var(--revenue-card-value, black);
+  color: var(--revenue-card-value, #121212);
 }
 
 /* Icon styling within the card */
