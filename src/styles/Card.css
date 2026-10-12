@@ -1,6 +1,5 @@
 /* Styling for KPICard and StatsRow components */
 .card-container {
-  border: red solid 1px; /* test border — temporary, remove once per-card colors are added */
   border-radius: 5px;
   margin: 1rem;
   padding: 1.2em;
@@ -24,13 +23,75 @@
 }
 
 /* Per-card styling override, applied via the className prop */
-.total-clients {
-  background: blue;
+.total-clients-card {
+  background: var(--total-clients-card-bg);
+  color: var(--total-clients-card-value);
+  border: solid 2px var(--total-clients-card-border);
+}
+
+.total-clients-card .icon-title svg {
+  color: white;
+  background: #0d58e9;
+  border: #0d58e9 solid;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 0.85em;
+}
+
+.active-clients-card {
+  background: var(--active-clients-card-bg);
+  color: var(--active-clients-card-value);
+  border: solid 2px var(--active-clients-card-border);
+}
+
+.active-clients-card svg {
+  color: var(--card-title-icon);
+  background: #10aa54;
+  font-size: 0.85em;
+  border-radius: 50%;
+  padding: 9px;
+  font-size: 0.85em;
+}
+
+.new-clients-card {
+  background: var(--new-clients-card-bg);
+  color: var(--new-clients-card-value);
+  border: solid 2px var(--new-clients-card-border);
+}
+
+.new-clients-card svg {
+  color: var(--card-title-icon);
+  background: #f3930c;
+  font-size: 0.85em;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.85em;
+}
+
+.revenue-card {
+  border: solid 2px var(--revenue-card-border);
+  background: var(--revenue-card-bg);
+}
+
+.revenue-card svg {
+  color: var(--card-title-icon);
+  background: #d92d30;
+  font-size: 0.85em;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 0.85em;
+}
+
+.revenue-card .card-title {
+  color: var(--revenue-card-title, black);
+}
+.revenue-card .card-value {
+  color: var(--revenue-card-value, black);
 }
 
 /* Icon styling within the card */
 .icon-title {
-  font-size: 3em;
+  font-size: 3.5em;
 }
 
 /* Layout for the card's text content */
@@ -43,6 +104,7 @@
 /* Card title styling, theme-aware via CSS variable */
 .card-title {
   color: var(--card-title);
+  font-size: 1.3rem;
 }
 
 /* Card value styling */
