@@ -3,7 +3,7 @@ import { PiQuestion } from "react-icons/pi";
 function KPICard({ data, label, value, icon, prefix, suffix, className }) {
   // Support both a `data` object prop OR individual props
   const cardLabel = data ? data.label : label;
-  const cardValue = data ? `${prefix || ""}${data.value}${suffix || ""}` : value;
+  const cardValue = data ? `${prefix || ""}${data.value.toLocaleString()}${suffix || ""}` : value;
   return (
     <div className={`card-container ${className || ""}`}>
       <div className="card-content">
