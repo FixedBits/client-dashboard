@@ -1,14 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/* Light Mode Styles */
+.dashboard {
+  --card-title-icon: #dddfea;
+  --card-title: #09090a;
+
+  --total-clients-card-bg: #e1e7f7;
+  --active-clients-card-bg: #dcebe2;
+  --new-clients-card-bg: #fae8d0;
+  --revenue-card-bg: #f1dedf;
+
+  --total-clients-card-value: #285be3;
+  --active-clients-card-value: #259060;
+  --new-clients-card-value: #f3981b;
+
+  --total-clients-card-border: #d5d4e1;
+  --active-clients-card-border: #c6d4cf;
+  --new-clients-card-border: #e4d8c5;
+  --revenue-card-border: #cfbcbe;
+}
+
+/* Dark Mode Styles */
 .dashboard.dark-mode {
   --dashboard-bg: #091423;
   --dashboard-text: #f2f1f1;
 
+  --page-title: #ffffff;
+
   --card-bg: #101f32;
   --card-title: #dddfea;
+  --card-title-icon: #dddfea;
   --card-stat-title: #bccfd8;
 
-  --page-title: #ffffff;
+  --total-clients-card-bg: #0d1d3c;
+  --active-clients-card-bg: #06212a;
+  --new-clients-card-bg: #231a17;
+  --revenue-card-bg: #27111d;
+
+  --total-clients-card-value: #1385f6;
+  --active-clients-card-value: #13e281;
+  --new-clients-card-value: #f9c137;
+
+  --total-clients-card-border: #102951;
+  --active-clients-card-border: #0a2a2e;
+  --new-clients-card-border: #2d2019;
+  --revenue-card-border: #3b1921;
+
+  --revenue-card-title: #cdbbcb;
+  --revenue-card-value: #f2f1f1;
 }
 
 /* =========================================================
