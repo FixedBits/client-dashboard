@@ -7,10 +7,9 @@ import { dashboardData } from "../data/dashboardData";
 
 // Dashboard Icons
 import { PiUsersThreeFill } from "react-icons/pi";
-import { PiCheckCircleFill } from "react-icons/pi";
-import { PiPlusCircleFill } from "react-icons/pi";
-import { PiCurrencyDollarFill } from "react-icons/pi";
-
+import { IoMdCheckmark } from "react-icons/io";
+import { IoAdd } from "react-icons/io5";
+import { TbCurrencyDollar } from "react-icons/tb";
 // Dashboard Home Component
 function DashboardHome() {
   return (
@@ -18,10 +17,10 @@ function DashboardHome() {
       <h1 className="dashboard-title">Dashboard</h1>
       {/* KPI ROW */}
       <div className="stats-row">
-        <KPICard className="total-clients"data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
-        <KPICard data={dashboardData.kpis.activeClients} icon={<PiCheckCircleFill />} />
-        <KPICard data={dashboardData.kpis.newClients} icon={<PiPlusCircleFill />} />
-        <KPICard data={dashboardData.kpis.revenue} icon={<PiCurrencyDollarFill />} prefix="$" />
+        <KPICard className="total-clients-card" data={dashboardData.kpis.totalClients} icon={<PiUsersThreeFill />} />
+        <KPICard className="active-clients-card" data={dashboardData.kpis.activeClients} icon={<IoMdCheckmark />} />
+        <KPICard className="new-clients-card" data={dashboardData.kpis.newClients} icon={<IoAdd />} />
+        <KPICard className="revenue-card" data={dashboardData.kpis.revenue} icon={<TbCurrencyDollar />} prefix="$" />
       </div>
 
       {/* CHARTS ROW */}
