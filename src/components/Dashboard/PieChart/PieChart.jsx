@@ -1,4 +1,5 @@
 import { PieChart as RePieChart, Pie, Tooltip, Legend, Sector, DefaultLegendContent } from "recharts";
+import "../../../styles/DashboardCharts.css";
 
 function PieChart({ data }) {
   const chartData = [

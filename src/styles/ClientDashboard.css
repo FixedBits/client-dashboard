@@ -36,13 +36,21 @@
 
 .charts-row {
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
   margin: 2rem 0;
+}
+
+.middle-row {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 1rem;
 }
 
 .bottom-row {
   display: flex;
-  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 1rem;
 }
 
 /* Dark mode styling */

@@ -4,7 +4,7 @@ import { BarChart as ReBarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGr
 // Expects `chartData` as an array shaped like { month, newClients, revenue }.
 function ReportsChart({ chartData }) {
   return (
-    <div>
+    <div className="reports-chart">
       <h3>Revenue & Client Growth</h3>
 
       <ReBarChart width={700} height={300} data={chartData}>

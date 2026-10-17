@@ -1,5 +1,7 @@
 import { LineChart as ReLineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
+import "../../../styles/dashboardCharts.css";
+
 function LineChart({ data }) {
   const chartData = data.map((monthlyData) => ({
     month: monthlyData.month,
@@ -7,7 +9,7 @@ function LineChart({ data }) {
   }));
   return (
     <div className="line-chart-card">
-      <h3>{data.label}</h3>
+      <h3>Monthly Performance</h3>
       <ReLineChart width={600} height={300} data={chartData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />

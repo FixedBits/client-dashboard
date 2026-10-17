@@ -1,3 +1,4 @@
+import "../../../styles/DashboardActivityFeed.css";
 
 function ActivityFeed({ items }) {
   return (

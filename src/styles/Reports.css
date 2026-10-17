@@ -1,9 +1,22 @@
 /* Styling for Reports Page */
-.middle-row {
-  display: flex;
-  justify-content: space-around;
-}
 
 .reports-page-title {
   color: var(--page-title);
+}
+
+.reports-chart {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.reports-chart h3 {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #8b8b8b8b;
+}
+
+.middle-row .reports-chart {
+  flex: 2;
 }

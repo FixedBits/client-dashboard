@@ -1,0 +1,32 @@
+.line-chart-card {
+  background: var(--card-bg, #fff);
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+.line-chart-card h3 {
+  padding-left: 0.6em;
+  padding-bottom: 1em;
+}
+
+.pie-chart {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.pie-chart h3 {
+  padding-left: 1.5em;
+}
+
+.charts-row .line-chart-card {
+  flex: 2;
+}
+
+.charts-row .pie-chart {
+  flex: 1;
+}
+
+.charts-row {
+  gap: 2rem;
+}

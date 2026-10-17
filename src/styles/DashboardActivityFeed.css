@@ -1,0 +1,24 @@
+.activity-feed {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  padding: 1em 2em;
+  border-radius: 8px;
+  font-size: 1.1em;
+}
+
+.activity-feed h3 {
+  padding-bottom: 1em;
+}
+
+.activity-item {
+  padding: 1rem;
+}
+
+/* bottom-row (from DashboardHome.jsx */
+.bottom-row .activity-feed {
+  flex: 1;
+}
+
+.bottom-row .revenue-table {
+  flex: 2;
+}

@@ -8,6 +8,8 @@
   max-width: 300px;
 }
 
+
+
 /* Mobile modal adjustments */
 @media (max-width: 768px) {
   .modal {
@@ -19,3 +21,4 @@
     font-size: 13px;
   }
 }
+

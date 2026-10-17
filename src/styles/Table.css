@@ -1,0 +1,66 @@
+/* Light Mode */
+.dashboard {
+  --table-bg: #f9fafb;
+  --table-header-bg: #f0f9ff;
+  --table-border: #e0e7ff;
+  --table-text: #0f172a;
+  --table-row-odd: #ffffff;
+  --table-row-even: #f7f7f7;
+  --table-row-hover: #f3f4f6;
+}
+
+/* Dark Mode */
+.dashboard.dark-mode {
+  --table-bg: #101f32;
+  --table-header-bg: #0d1d3c;
+  --table-border: #1e2d44;
+  --table-text: #f2f1f1;
+  --table-row-odd: #101f32;
+  --table-row-even: #0c1a2b;
+  --table-row-hover: #16293f;
+}
+
+/* =========================================================
+   TABLE BASE
+========================================================= */
+table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: #f9fafb;
+  color: #0f172a;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+thead th {
+  text-align: left;
+  padding: 14px;
+  background: #f0f9ff;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e7ff;
+}
+
+/* =========================================================
+   TABLE ROWS
+========================================================= */
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+tbody tr:hover {
+  background: #f3f4f6;
+}

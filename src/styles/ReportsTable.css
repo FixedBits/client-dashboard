@@ -2,11 +2,14 @@
   background: var(--card-bg, #fff);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  padding: 1.5em;
-  margin: 2rem 0;
-  max-width: 100%;
+  padding: 2em;
+  width: 100%;
 }
 
 .revenue-table-title {
   color: var(--card-title);
+}
+
+.reports-table-card h3 {
+  margin-bottom: 1rem;
 }

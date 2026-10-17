@@ -24,8 +24,10 @@ function Reports() {
         <ReportsStatCard totalRevenue={reportsData.stats.totalRevenue.value} totalClients={dashboardData.kpis.totalClients.value} />
       </div>
 
-      {/* Monthly breakdown table — shares revenueTable with the Dashboard's LineChart */}
-      <ReportsTable rows={dashboardData.revenueTable} />
+      <div className="bottom-row">
+        {/* Monthly breakdown table — shares revenueTable with the Dashboard's LineChart */}
+        <ReportsTable rows={dashboardData.revenueTable} />
+      </div>
     </div>
   );
 }

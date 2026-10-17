@@ -9,12 +9,11 @@
  */
 .card-container {
   border-radius: 5px;
-  margin: 1rem;
+  margin-top: 2rem;
   padding: 1.2em;
   width: 300px;
   flex: 1;
   min-width: 240px; /* Don't get squished smaller than this */
-  max-width: 320px; /* Don't stretch too wide on huge monitors */
 }
 
 /**
@@ -30,8 +29,8 @@
  */
 .stats-row {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
+  margin: 0 1rem;
 }
 
 /**
@@ -39,7 +38,8 @@
  * Per-card override, applied via the className prop.
  * Colors come from theme-aware CSS variables.
  */
-.total-clients-card {
+.total-clients-card,
+.conversion-rate-card {
   background: var(--total-clients-card-bg);
   color: var(--total-clients-card-value);
   border: solid 2px var(--total-clients-card-border);
@@ -48,7 +48,8 @@
 /**
  * Total Clients icon: white glyph on a blue circular badge.
  */
-.total-clients-card .icon-title svg {
+.total-clients-card .icon-title svg,
+.conversion-rate-card .icon-title svg {
   color: white;
   background: #0d58e9;
   border: #0d58e9 solid;
@@ -60,7 +61,8 @@
 /**
  * Active Clients card.
  */
-.active-clients-card {
+.active-clients-card,
+.average-growth-card {
   background: var(--active-clients-card-bg);
   color: var(--active-clients-card-value);
   border: solid 2px var(--active-clients-card-border);
@@ -69,7 +71,8 @@
 /**
  * Active Clients icon: green circular badge.
  */
-.active-clients-card svg {
+.active-clients-card svg,
+.average-growth-card svg {
   color: var(--card-title-icon);
   background: #10aa54;
   font-size: 0.85em;
@@ -102,7 +105,8 @@
 /**
  * Revenue card.
  */
-.revenue-card {
+.revenue-card,
+.total-revenue-card {
   border: solid 2px var(--revenue-card-border);
   background: var(--revenue-card-bg);
 }
@@ -110,7 +114,8 @@
 /**
  * Revenue icon: red circular badge.
  */
-.revenue-card svg {
+.revenue-card svg,
+.total-revenue-card svg {
   color: var(--card-title-icon);
   background: #d92d30;
   font-size: 0.85em;

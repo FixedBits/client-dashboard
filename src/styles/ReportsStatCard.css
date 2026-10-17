@@ -1,11 +1,10 @@
 /* Main container for the trend analysis card - white background, rounded corners, subtle shadow like the other dashboard cards */
 .trend-analysis-card {
   background: var(--card-bg, #fff);
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  margin: 2rem 0;
-  max-width: 100%;
+  min-width: 40%;
 }
 
 /* Header/title area of the card - separated from the content below by a bottom border */
@@ -45,4 +44,8 @@
 .stat-compare-value {
   color: #008d1c;
   font-weight: bold;
+}
+
+.middle-row .trend-analysis-card {
+  flex: 2;
 }

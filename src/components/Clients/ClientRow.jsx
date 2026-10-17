@@ -74,18 +74,20 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
         <div className="modal-overlay">
           <div className="modal">
             <p>Are you sure you want to delete this client?</p>
-            <button className="btn" onClick={() => setShowConfirm(false)}>
-              Cancel
-            </button>
-            <button
-              className="btn delete"
-              onClick={() => {
-                onDelete();
-                setShowConfirm(false);
-              }}
-            >
-              Yes, Delete
-            </button>
+            <div className="delete-confirm-container">
+              <button className="btn" onClick={() => setShowConfirm(false)}>
+                Cancel
+              </button>
+              <button
+                className="btn delete"
+                onClick={() => {
+                  onDelete();
+                  setShowConfirm(false);
+                }}
+              >
+                Yes, Delete
+              </button>
+            </div>
           </div>
         </div>
       )}
