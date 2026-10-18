@@ -1,14 +1,23 @@
 /* =========================================================
    ROW / CELL SPECIFIC STYLES
 ========================================================= */
-
 .client-row input,
 .client-row select {
   width: 100%;
   max-width: 300px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 0.5rem 0.65rem;
+  border-radius: 4px;
 }
 
-
+.client-row input:focus,
+.client-row select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
 
 /* Mobile modal adjustments */
 @media (max-width: 768px) {
@@ -21,4 +30,3 @@
     font-size: 13px;
   }
 }
-
