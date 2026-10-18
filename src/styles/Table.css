@@ -27,8 +27,8 @@ table {
   width: 100%;
   min-width: 700px;
   border-collapse: collapse;
-  background: #f9fafb;
-  color: #0f172a;
+  background: var(--table-bg);
+  color: var(--table-text);
 }
 
 /* =========================================================
@@ -37,10 +37,10 @@ table {
 thead th {
   text-align: left;
   padding: 14px;
-  background: #f0f9ff;
+  background: var(--table-header-bg);
   font-weight: 600;
   font-size: 14px;
-  border-bottom: 1px solid #e0e7ff;
+  border-bottom: 1px solid var(--table-border);
 }
 
 /* =========================================================
@@ -48,19 +48,19 @@ thead th {
 ========================================================= */
 tbody td {
   padding: 12px 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--table-border);
   font-size: 14px;
-  color: #0f172a;
+  color: var(--table-text);
 }
 
 tbody tr:nth-child(odd) {
-  background: #ffffff;
+  background: var(--table-row-odd);
 }
 
 tbody tr:nth-child(even) {
-  background: #f7f7f7;
+  background: var(--table-row-even);
 }
 
 tbody tr:hover {
-  background: #f3f4f6;
+  background: var(--table-row-hover);
 }

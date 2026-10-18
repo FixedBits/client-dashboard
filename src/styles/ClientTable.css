@@ -20,9 +20,9 @@
 /* =========================================================
    ACTIONS CELL
 ========================================================= */
-td.actions-cell {
+.actions-cell-inner {
   display: flex;
-  gap: 8px;
+  gap: 2px;
   align-items: center;
 }
 
