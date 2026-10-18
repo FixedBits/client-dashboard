@@ -1,16 +1,86 @@
 /* =========================================================
+   LIGHT / DARK MODE VARIABLES
+========================================================= */
+.dashboard {
+  --action-btn-bg: #e5e7eb;
+  --action-btn-text: #0f172a;
+  --action-btn-hover: #d1d5db;
+
+  --delete-btn-bg: #fee2e2;
+  --delete-btn-text: #dc2626;
+  --delete-btn-hover: #fecaca;
+
+  --edit-btn-bg: #dbeafe;
+  --edit-btn-text: #3b82f6;
+  --edit-btn-hover: #bfdbfe;
+
+  --view-btn-bg: #d1fae5;
+  --view-btn-text: #10b981;
+  --view-btn-hover: #a7f3d0;
+
+  --status-active-bg: #dcfce7;
+  --status-active-text: #059669;
+  --status-active-hover: #86efac;
+
+  --status-pending-bg: #fef3c7;
+  --status-pending-text: #d97706;
+  --status-pending-hover: #fcd34d;
+
+  --status-inactive-bg: #f3f4f6;
+  --status-inactive-text: #6b7280;
+  --status-inactive-hover: #e5e7eb;
+
+  --status-badge-border: rgba(0, 0, 0, 0.12);
+}
+
+.dashboard.dark-mode {
+  --action-btn-bg: #1e2d44;
+  --action-btn-text: #f2f1f1;
+  --action-btn-hover: #2d3f58;
+
+  --delete-btn-bg: #2d1515;
+  --delete-btn-text: #f87171;
+  --delete-btn-hover: #3a1c1c;
+
+  --edit-btn-bg: #10233d;
+  --edit-btn-text: #60a5fa;
+  --edit-btn-hover: #152d4d;
+
+  --view-btn-bg: #0e2a22;
+  --view-btn-text: #34d399;
+  --view-btn-hover: #12382e;
+
+  --status-active-bg: #0e2a22;
+  --status-active-text: #34d399;
+  --status-active-hover: #12382e;
+
+  --status-pending-bg: #2e2308;
+  --status-pending-text: #fbbf24;
+  --status-pending-hover: #3a2c0a;
+
+  --status-inactive-bg: #1e2d44;
+  --status-inactive-text: #9ca3af;
+  --status-inactive-hover: #2d3f58;
+
+  --status-badge-border: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================================
    TABLE WRAPPER
 ========================================================= */
 .table-wrapper {
-  /* border: 1px solid #c4c4c4; */
   background: var(--card-bg, #fff);
-  width: 100%;
   overflow-x: auto;
+  width: auto;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 2rem 1rem;
   padding: 2rem;
+  scrollbar-width: none;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .table-wrapper h3 {
@@ -22,7 +92,7 @@
 ========================================================= */
 .actions-cell-inner {
   display: flex;
-  gap: 2px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -58,12 +128,12 @@ table button {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  background: #e5e7eb;
-  color: #0f172a;
+  background: var(--action-btn-bg);
+  color: var(--action-btn-text);
 }
 
 table button:hover {
-  background: #d1d5db;
+  background: var(--action-btn-hover);
 }
 
 .delete-confirm-container {
@@ -72,35 +142,35 @@ table button:hover {
 
 /* DELETE BUTTON */
 table button.delete {
-  background: #fee2e2;
-  color: #dc2626;
+  background: var(--delete-btn-bg);
+  color: var(--delete-btn-text);
   font-size: 12px;
 }
 
 table button.delete:hover {
-  background: #fecaca;
+  background: var(--delete-btn-hover);
 }
 
 /* EDIT BUTTON */
 table button.edit {
-  background: #dbeafe;
-  color: #3b82f6;
+  background: var(--edit-btn-bg);
+  color: var(--edit-btn-text);
   font-size: 12px;
 }
 
 table button.edit:hover {
-  background: #bfdbfe;
+  background: var(--edit-btn-hover);
 }
 
 /* VIEW BUTTON */
 table button.view {
-  background: #d1fae5;
-  color: #10b981;
+  background: var(--view-btn-bg);
+  color: var(--view-btn-text);
   font-size: 12px;
 }
 
 table button.view:hover {
-  background: #a7f3d0;
+  background: var(--view-btn-hover);
 }
 
 /* =========================================================
@@ -112,7 +182,7 @@ table button.view:hover {
   font-size: 12px;
   font-weight: 500;
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--status-badge-border);
   transition: all 0.2s ease;
   cursor: default;
 }
@@ -122,31 +192,31 @@ table button.view:hover {
 }
 
 .status-active {
-  background: #dcfce7;
-  color: #059669;
+  background: var(--status-active-bg);
+  color: var(--status-active-text);
 }
 
 .status-active:hover {
-  background: #86efac;
+  background: var(--status-active-hover);
   box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
 }
 
 .status-pending {
-  background: #fef3c7;
-  color: #d97706;
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
 }
 
 .status-pending:hover {
-  background: #fcd34d;
+  background: var(--status-pending-hover);
   box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);
 }
 
 .status-inactive {
-  background: #f3f4f6;
-  color: #6b7280;
+  background: var(--status-inactive-bg);
+  color: var(--status-inactive-text);
 }
 
 .status-inactive:hover {
-  background: #e5e7eb;
+  background: var(--status-inactive-hover);
   box-shadow: 0 2px 6px rgba(107, 114, 128, 0.3);
 }
