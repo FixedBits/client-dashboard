@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0; /* prevents flex children from overflowing horizontally */
+  margin-left: 300px;
 }
 
 /* "Add" button */
@@ -26,6 +27,7 @@
   color: #ffffff;
   cursor: pointer;
   border: 1px solid rgba(8, 0, 255, 0.294);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.315);
   border-radius: 5px;
   align-self: flex-end;
 }

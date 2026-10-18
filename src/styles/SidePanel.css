@@ -1,14 +1,17 @@
 /* Side panel container layout + background */
 .side-panel {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 300px;
   flex-shrink: 0;
-  background: #23365d;
+  background: linear-gradient(180deg, #06265c 0%, #010d22 100%);
   border-right: 2px solid #00094a;
-  height: auto;
-  padding: 20px 25px;
+  height: 100vh;
+  padding: 20px 20px;
   box-sizing: border-box;
   border-radius: 5px 0 0 5px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.266);
 }
 
 /* Title styling inside the side panel */
@@ -28,7 +31,8 @@
 }
 
 .panel-links a svg {
-  margin-right: 8px;
+  margin-right: 1.2rem;
+  font-weight: bold;
 }
 
 /* Wrapper for the link list */
@@ -40,21 +44,31 @@
 
 /* Base styling for each sidebar link */
 .sidebar-link {
-  padding: 10px 14px;
   display: block;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+  padding: 1.2rem;
 }
 
 /* Active link highlight */
 .sidebar-link.active {
+  font-weight: bold;
   background: #e0e7ff;
+  padding: 1.2rem;
   color: #1e3a8a;
-  font-weight: 600;
 }
 
 .dashboard.dark-mode .side-panel {
-  background: #04204c;
+  background: linear-gradient(180deg, #06265c 0%, #010d22 100%);
   color: #dddfea;
+}
+
+.dashboard.dark-mode .sidebar-link {
+  color: #dddfea;
+}
+
+.dashboard.dark-mode .sidebar-link.active {
+  background: #2451a1;
+  color: #e0e7ff;
 }
