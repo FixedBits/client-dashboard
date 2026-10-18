@@ -1,5 +1,4 @@
 /* Styling for Reports Page */
-
 .reports-page-title {
   color: var(--page-title);
 }
@@ -8,6 +7,7 @@
   background: var(--card-bg, #fff);
   border-radius: 8px;
   padding: 1em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .reports-chart h3 {
