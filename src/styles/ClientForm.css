@@ -1,19 +1,43 @@
+/* Light Mode */
+.dashboard {
+  --form-bg: #ffffff;
+  --form-border: #e0e7ff;
+  --form-title: #0f172a;
+  --input-bg: #ffffff;
+  --input-text: #0f172a;
+  --input-border: #cbd5e1;
+  --label-text: #374151;
+}
+
+/* Dark Mode */
+.dashboard.dark-mode {
+  --form-bg: #101f32;
+  --form-border: #1e2d44;
+  --form-title: #f2f1f1;
+  --input-bg: #0c1a2b;
+  --input-text: #f2f1f1;
+  --input-border: #2d3f58;
+  --label-text: #bccfd8;
+}
+
 /* Main form container layout */
 .add-client-form {
+  background: var(--form-bg);
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border: 1px solid rgb(145, 145, 145);
+  border: 1px solid var(--form-border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 2rem;
+  margin: 2rem 1rem;
   overflow: hidden;
   flex-shrink: 0;
 }
 
 /* Form title styling */
 form h2 {
-  margin: 0;
+  margin-bottom: 1rem;
   white-space: nowrap;
   align-self: first baseline;
 }
@@ -35,17 +59,28 @@ Form .error {
 
 /* Label + input vertical stack */
 .add-client-labels label {
+  color: var(--label-text);
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 /* Input and select field styling */
 .add-client-labels input,
 .add-client-labels select {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
   width: 100%;
   padding: 0.55rem 0.7rem;
+}
+
+.add-client-labels input:focus,
+.add-client-labels select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
 }
 
 /* Button row layout */
