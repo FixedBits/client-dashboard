@@ -43,29 +43,31 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
         </td>
 
         <td data-label="Actions" className="actions-cell">
-          {actions.map((action) => (
-            <button
-              key={action}
-              className={action.toLowerCase()}
-              onClick={() => {
-                if (action === "Delete") setShowConfirm(true);
-                if (action === "View") setShowView(true);
-                if (action === "Edit") {
-                  if (isEditing) {
-                    onSave({
-                      name: editName,
-                      email: editEmail,
-                      company: editCompany,
-                      status: editStatus,
-                    });
+          <div className="actions-cell-inner">
+            {actions.map((action) => (
+              <button
+                key={action}
+                className={action.toLowerCase()}
+                onClick={() => {
+                  if (action === "Delete") setShowConfirm(true);
+                  if (action === "View") setShowView(true);
+                  if (action === "Edit") {
+                    if (isEditing) {
+                      onSave({
+                        name: editName,
+                        email: editEmail,
+                        company: editCompany,
+                        status: editStatus,
+                      });
+                    }
+                    setIsEditing(!isEditing);
                   }
-                  setIsEditing(!isEditing);
-                }
-              }}
-            >
-              {action === "Edit" && isEditing ? "Save" : action}
-            </button>
-          ))}
+                }}
+              >
+                {action === "Edit" && isEditing ? "Save" : action}
+              </button>
+            ))}
+          </div>
         </td>
       </tr>
 
