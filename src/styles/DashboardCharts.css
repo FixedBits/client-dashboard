@@ -1,29 +1,31 @@
 .line-chart-card {
   background: var(--card-bg, #fff);
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .line-chart-card h3 {
-  padding-left: 0.6em;
-  padding-bottom: 1em;
+  padding-left: 0.6rem;
+  padding-bottom: 1rem;
 }
 
-.pie-chart {
+.pie-chart-card {
   background: var(--card-bg, #fff);
   border-radius: 8px;
-  padding: 1em;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.pie-chart h3 {
-  padding-left: 1.5em;
+.pie-chart-card h3 {
+  padding-left: 0.6rem;
 }
 
 .charts-row .line-chart-card {
   flex: 2;
 }
 
-.charts-row .pie-chart {
+.charts-row .pie-chart-card {
   flex: 1;
 }
 
