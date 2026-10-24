@@ -1,38 +1,131 @@
+.dashboard {
+  --settings-card-border: #e0e7ff;
+  --settings-btn-border: #e0e7ff;
+  --settings-divider: #e5e7eb;
+  --settings-btn-bg: #f1f5f9;
+  --settings-btn-text: #0f172a;
+  --settings-btn-hover: #e2e8f0;
+  --settings-btn-active: #cbd5e1;
+}
+
+.dashboard.dark-mode {
+  --settings-card-border: #212e42;
+  --settings-btn-border: #2c3e58;
+  --settings-divider: #2d3f58dd;
+  --settings-btn-bg: #162434;
+  --settings-btn-text: #f0f8ff;
+  --settings-btn-hover: #2d2d2d;
+  --settings-btn-active: #313131;
+}
+
 .settings-btns-container {
   background: var(--card-bg, #fff);
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 700px;
+  box-shadow: 0 4px 20px #0000001a;
 }
 
 .settings-page-title {
   color: var(--page-title);
 }
 
-.settings-reset-btn,
-.settings-dark-mode-btn {
-  min-width: 20%;
-  background: rgb(114, 113, 113);
-  color: aliceblue;
+.settings-btns-container {
+  border: 1px solid var(--settings-card-border);
+  padding: 4rem 3rem;
+  border-radius: 11px;
+}
+
+.container-divider-line {
+  border-bottom: solid 1px var(--settings-divider);
+}
+
+.dark-mode-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.reset-btn-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.dark-mode-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reset-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dark-mode-container,
+.reset-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-switch,
+.settings-reset-btn {
+  background: var(--settings-btn-bg);
+  color: var(--settings-btn-text);
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: solid 2px var(--settings-btn-border);
   border-radius: 10px;
   overflow-x: hidden;
-  font-size: 1.1rem;
-  font-weight: 600;
 }
 
 .settings-reset-btn:hover,
 .settings-dark-mode-btn:hover {
-  background: rgb(71, 71, 71);
+  background: var(--settings-btn-hover);
   transform: scale(0.98);
 }
 
 .settings-reset-btn:active,
 .settings-dark-mode-btn:active {
-  background: rgb(49, 49, 49);
+  background: var(--settings-btn-active);
   transform: scale(0.95);
+}
+
+.settings-reset-btn {
+  font-size: 1em;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+  flex-shrink: 0; /* Prevents pill from getting compressed */
+}
+.toggle-switch.toggle-switch-on {
+  background: #3860d6;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.toggle-switch-on .toggle-thumb {
+  transform: translateX(22px);
 }
