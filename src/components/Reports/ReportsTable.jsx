@@ -1,19 +1,5 @@
 import "../../styles/ReportsTable.css";
-
-const monthNames = {
-  Jan: "January",
-  Feb: "February",
-  Mar: "March",
-  Apr: "April",
-  May: "May",
-  Jun: "June",
-  Jul: "July",
-  Aug: "August",
-  Sep: "September",
-  Oct: "October",
-  Nov: "November",
-  Dec: "December",
-};
+import { monthNames } from "../../data/monthNames";
 
 function ReportsTable({ rows }) {
   return (

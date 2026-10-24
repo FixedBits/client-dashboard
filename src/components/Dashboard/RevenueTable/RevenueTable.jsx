@@ -1,4 +1,6 @@
 import "../../../styles/RevenueTable.css";
+import { monthNames } from "../../../data/monthNames";
+
 function RevenueTable({ rows }) {
   return (
     <div className="revenue-table">
@@ -15,7 +17,7 @@ function RevenueTable({ rows }) {
         <tbody>
           {rows.map((row, index) => (
             <tr key={index}>
-              <td>{row.month}</td>
+              <td>{monthNames[row.month]}</td>
               <td>{row.revenue.toLocaleString()}</td>
               <td>{row.clientsAdded}</td>
               <td>{row.growth}</td>
