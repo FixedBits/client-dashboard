@@ -1,22 +1,68 @@
-.activity-feed {
+.activity-feed-card {
   background: var(--card-bg, #fff);
   border-radius: 8px;
   padding: 1em 2em;
-  border-radius: 8px;
   font-size: 1.1em;
   box-shadow: 0 4px 20px #0000001a;
 }
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
 
-.activity-feed h3 {
+.activity-item p {
+  margin: 0;
+}
+
+.activity-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.activity-time {
+  color: var(--text-muted, #9ca3af);
+  font-size: 0.85rem;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+  background: #9ca3af;
+}
+
+.status-dot.added {
+  background: #10b981;
+}
+
+.status-dot.updated {
+  background: #f59e0b;
+}
+
+.status-dot.deleted {
+  background: #ef4444;
+}
+
+.status-dot.neutral {
+  background: #9ca3af;
+}
+.activity-feed-card h3 {
   padding-bottom: 1em;
 }
 
-.activity-item {
-  padding: 1rem;
-}
-
 /* bottom-row (from DashboardHome.jsx */
-.bottom-row .activity-feed {
+.bottom-row .activity-feed-card {
   flex: 1;
 }
 
