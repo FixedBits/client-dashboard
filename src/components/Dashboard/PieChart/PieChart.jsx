@@ -6,10 +6,10 @@ function PieChart({ data }) {
     { name: "Converted", value: data.converted },
     { name: "Not Converted", value: data.notConverted },
   ];
-  const COLORS = ["#4CAF50", "#F44336"];
+  const COLORS = ["var(--pie-converted)", "var(--pie-not-converted"];
 
   return (
-    <div className="pie-chart">
+    <div className="pie-chart-card">
       <h3>{data.label}</h3>
       <RePieChart width={300} height={250}>
         <Pie

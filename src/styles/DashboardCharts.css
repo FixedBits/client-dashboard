@@ -1,3 +1,13 @@
+.dashboard {
+  --pie-converted: #10b981;
+  --pie-not-converted: #ef4444;
+}
+
+.dashboard.dark-mode {
+  --pie-converted: #34d399;
+  --pie-not-converted: #f87171;
+}
+
 .line-chart-card {
   background: var(--card-bg, #fff);
   padding: 1rem 2rem;
