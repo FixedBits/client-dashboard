@@ -14,7 +14,7 @@
   width: 300px;
   flex: 1;
   min-width: 240px; /* Don't get squished smaller than this */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px #0000001a;
 }
 
 /**

@@ -2,7 +2,7 @@
 .trend-analysis-card {
   background: var(--card-bg, #fff);
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px #0000001a;
   padding: 1.5rem;
   min-width: 40%;
 }
