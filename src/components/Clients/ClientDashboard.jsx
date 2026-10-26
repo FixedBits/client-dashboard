@@ -19,6 +19,7 @@ function ClientDashboard() {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
 
+  // Recent activity feed state (seeded from dashboardData)
   const [activities, setActivities] = useState(dashboardData.activities);
 
   const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") ? JSON.parse(localStorage.getItem("darkMode")) : false);
@@ -27,6 +28,7 @@ function ClientDashboard() {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
+  // Add a new entry to the top of the activity feed, capped at 5
   function addActivity(message) {
     setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0, 5));
   }
@@ -46,6 +48,7 @@ function ClientDashboard() {
 
   // Update existing client by ID
   function handleSave(id, updatedClient) {
+    // Find the original client so we can skip logging a no-op save
     const original = clients.find((client) => client.id === id);
     const changed = updatedClient.name !== original.name || updatedClient.email !== original.email || updatedClient.company !== original.company || updatedClient.status !== original.status;
 
@@ -65,11 +68,12 @@ function ClientDashboard() {
 
   // Delete client by ID
   function handleDelete(id) {
+    // Grab the name before filtering the client out, for the activity message
     const deletedClient = clients.find((client) => client.id === id);
     setClients((prev) => prev.filter((client) => client.id !== id));
     addActivity(`Deleted client: ${deletedClient.name}`);
   }
-  
+
   return (
     <div className={darkMode ? "dashboard dark-mode" : "dashboard"}>
       <SidePanel />
