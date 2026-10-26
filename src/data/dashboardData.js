@@ -18,8 +18,10 @@ export const dashboardData = {
   },
   activities: [
     { message: "Added new client: Sara Johnson", time: "2h ago" },
-    { message: "Updated client: Jane Doe", time: "5h ago" },
-    { message: "Deleted client: Bob Wilson", time: "1d ago" },
+    { message: "Updated client: Jane Doe", time: "3h ago" },
+    { message: "Deleted client: Bob Wilson", time: "5h ago" },
+    { message: "Added new client: Sara Johnson", time: "7h ago" },
+    { message: "Added new client: Jane Doe", time: "1d ago" },
   ],
 
   revenueTable: [
