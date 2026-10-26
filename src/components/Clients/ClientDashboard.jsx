@@ -28,7 +28,7 @@ function ClientDashboard() {
   }, [darkMode]);
 
   function addActivity(message) {
-    setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0,5));
+    setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0, 5));
   }
 
   function handleReset() {
@@ -41,10 +41,14 @@ function ClientDashboard() {
   function handleAddClient(newClient) {
     setClients((prev) => [newClient, ...prev]);
     setShowForm(false);
+    addActivity(`Added new client: ${newClient.name}`);
   }
 
   // Update existing client by ID
   function handleSave(id, updatedClient) {
+    const original = clients.find((client) => client.id === id);
+    const changed = updatedClient.name !== original.name || updatedClient.email !== original.email || updatedClient.company !== original.company || updatedClient.status !== original.status;
+
     setClients((prev) =>
       prev.map((client) =>
         client.id === id
@@ -56,20 +60,23 @@ function ClientDashboard() {
           : client,
       ),
     );
+    if (changed) addActivity(`Updated client: ${updatedClient.name}`);
   }
 
   // Delete client by ID
   function handleDelete(id) {
+    const deletedClient = clients.find((client) => client.id === id);
     setClients((prev) => prev.filter((client) => client.id !== id));
+    addActivity(`Deleted client: ${deletedClient.name}`);
   }
-
+  
   return (
     <div className={darkMode ? "dashboard dark-mode" : "dashboard"}>
       <SidePanel />
       <div className="dashboard-content">
         <Routes>
           {/* Dashboard Home */}
-          <Route path="/" element={<DashboardHome />} />
+          <Route path="/" element={<DashboardHome activities={activities} />} />
 
           {/* Clients Page */}
           <Route

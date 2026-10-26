@@ -11,7 +11,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoAdd } from "react-icons/io5";
 import { TbCurrencyDollar } from "react-icons/tb";
 // Dashboard Home Component
-function DashboardHome() {
+function DashboardHome({ activities }) {
   return (
     <div className="dashboard-home">
       <h1 className="dashboard-title">Dashboard</h1>
@@ -31,7 +31,7 @@ function DashboardHome() {
 
       {/* BOTTOM ROW */}
       <div className="bottom-row">
-        <ActivityFeed items={dashboardData.activities} />
+        <ActivityFeed items={activities} />
         <RevenueTable rows={dashboardData.revenueTable} />
       </div>
     </div>
