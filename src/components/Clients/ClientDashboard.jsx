@@ -3,6 +3,7 @@ import ClientForm from "./ClientForm";
 import ClientTable from "./ClientTable";
 import SidePanel from "../SidePanel";
 import { initialClients } from "../../data/clients";
+import { dashboardData } from "../../data/dashboardData";
 import { Routes, Route } from "react-router-dom";
 import DashboardHome from "../DashboardHome";
 import Reports from "../Reports";
@@ -18,11 +19,17 @@ function ClientDashboard() {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
 
+  const [activities, setActivities] = useState(dashboardData.activities);
+
   const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") ? JSON.parse(localStorage.getItem("darkMode")) : false);
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
+
+  function addActivity(message) {
+    setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0,5));
+  }
 
   function handleReset() {
     setClients(initialClients);
