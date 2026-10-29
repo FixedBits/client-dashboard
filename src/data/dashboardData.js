@@ -6,16 +6,12 @@ export const dashboardData = {
     revenue: { label: "Revenue", value: 78200 },
   },
 
-  monthlyPerformance: {
-    label: "Monthly Performance",
-    values: [4200, 3100, 5800, 6500],
-  },
-
   conversionRate: {
     label: "Conversion Rate",
     converted: 32,
     notConverted: 68,
   },
+
   activities: [
     { message: "Added new client: Sara Johnson", time: "2h ago" },
     { message: "Updated client: Jane Doe", time: "3h ago" },
