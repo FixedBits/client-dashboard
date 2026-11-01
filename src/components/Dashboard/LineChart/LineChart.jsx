@@ -9,7 +9,7 @@ function LineChart({ data }) {
   }));
   return (
     <div className="line-chart-card">
-      <h3>Monthly Performance</h3>
+      <h3>Monthly Performance (2026)</h3>
       <ReLineChart width={600} height={300} data={chartData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />

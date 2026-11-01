@@ -5,7 +5,7 @@ import { BarChart as ReBarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGr
 function ReportsChart({ chartData }) {
   return (
     <div className="reports-chart">
-      <h3>Revenue & Client Growth</h3>
+      <h3>Revenue & Client Growth (2026)</h3>
 
       <ReBarChart width={700} height={300} data={chartData}>
         <CartesianGrid />

@@ -4,7 +4,7 @@ import { monthNames } from "../../../data/monthNames";
 function RevenueTable({ rows }) {
   return (
     <div className="revenue-table">
-      <h3 className="revenue-table-title">Revenue Table</h3>
+      <h3 className="revenue-table-title">Revenue Table (2026)</h3>
       <table>
         <thead>
           <tr>

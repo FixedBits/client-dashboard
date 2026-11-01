@@ -5,7 +5,7 @@ function ReportsTable({ rows }) {
   return (
     <>
       <div className="reports-table-card">
-        <h3>Report Table</h3>
+        <h3>Report Table (2026)</h3>
         <table>
           <thead>
             <tr>
