@@ -34,7 +34,7 @@ function ClientDashboard() {
 
   // Add a new entry to the top of the activity feed, capped at 5
   function addActivity(message) {
-    setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0, 5));
+    setActivities((prev) => [{ message, time: "Just now" }, ...prev].slice(0, 6));
   }
 
   function handleReset() {
