@@ -2,7 +2,7 @@ export const dashboardData = {
   kpis: {
     totalClients: { label: "Total Clients", value: 256 },
     activeClients: { label: "Active Clients", value: 135 },
-    newClients: { label: "New Clients", value: 45 },
+    newClients: { label: "Clients Added", period: 2026, value: 137 },
     revenue: { label: "Revenue", value: 78200 },
   },
 
