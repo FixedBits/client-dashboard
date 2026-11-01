@@ -5,7 +5,7 @@ import ClientRow from "./ClientRow";
 function ClientTable({ clients, onSave, onDelete }) {
   return (
     <div>
-      <div className="table-wrapper">
+      <div className="clients-table-wrapper">
         <h3 className="client-list-title">Client List</h3>
         <table>
           <thead>

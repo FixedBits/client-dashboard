@@ -68,7 +68,7 @@
 /* =========================================================
    TABLE WRAPPER
 ========================================================= */
-.table-wrapper {
+.clients-table-wrapper {
   background: var(--card-bg, #fff);
   overflow-x: auto;
   width: auto;
