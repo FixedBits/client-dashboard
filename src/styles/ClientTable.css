@@ -79,11 +79,11 @@
   scrollbar-width: none;
 }
 
-.table-wrapper::-webkit-scrollbar {
+.clients-table-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-.table-wrapper h3 {
+.clients-table-wrapper h3 {
   margin-bottom: 2rem;
 }
 
