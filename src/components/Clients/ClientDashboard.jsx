@@ -20,7 +20,11 @@ function ClientDashboard() {
   }, [clients]);
 
   // Recent activity feed state (seeded from dashboardData)
-  const [activities, setActivities] = useState(dashboardData.activities);
+  const [activities, setActivities] = useState(localStorage.getItem("activities") ? JSON.parse(localStorage.getItem("activities")) : dashboardData.activities);
+
+  useEffect(() => {
+    localStorage.setItem("activities", JSON.stringify(activities));
+  }, [activities]);
 
   const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") ? JSON.parse(localStorage.getItem("darkMode")) : false);
 
