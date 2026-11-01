@@ -2,10 +2,10 @@
   background: var(--card-bg, #fff);
   border-radius: 8px;
   box-shadow: 0 4px 20px #0000001a;
-  padding: 1.5em 2em;
+  padding: 2em;
   max-width: 100%;
 }
 
 .revenue-table h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }

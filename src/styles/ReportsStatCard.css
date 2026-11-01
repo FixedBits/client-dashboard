@@ -23,7 +23,7 @@
 
 /* Label/name for a given stat within a row */
 .stat-row .stat-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--card-stat-title, #052555);
 }
 
