@@ -1,11 +1,13 @@
 .dashboard {
   --pie-converted: #10b981;
   --pie-not-converted: #ef4444;
+  --chart-grid: rgba(0, 0, 0, 0.06);
 }
 
 .dashboard.dark-mode {
   --pie-converted: #34d399;
   --pie-not-converted: #f87171;
+  --chart-grid: rgba(255, 255, 255, 0.05);
 }
 
 .line-chart-card {
