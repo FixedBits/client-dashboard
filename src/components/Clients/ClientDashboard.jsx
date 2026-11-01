@@ -39,6 +39,7 @@ function ClientDashboard() {
 
   function handleReset() {
     setClients(initialClients);
+    addActivity("Reset client list to defaults");
   }
   // Form visibility state
   const [showForm, setShowForm] = useState(false);
