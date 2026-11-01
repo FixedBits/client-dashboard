@@ -6,15 +6,16 @@
 .reports-chart {
   background: var(--card-bg, #fff);
   border-radius: 8px;
-  padding: 1em;
+  padding: 2rem 1rem;
   box-shadow: 0 4px 20px #0000001a;
+  box-sizing: border-box;
 }
 
 .reports-chart h3 {
-  margin-left: 2em;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #8b8b8b8b;
+  padding-left: 0.6rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .middle-row .reports-chart {
