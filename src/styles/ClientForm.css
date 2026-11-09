@@ -43,7 +43,7 @@ form h2 {
 }
 
 /* Error message styling */
-Form .error {
+.error {
   color: crimson;
   font-size: 10px;
   margin: 0;
