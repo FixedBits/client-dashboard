@@ -39,7 +39,7 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
           {isEditing ? (
             <select value={editStatus} onChange={(e) => setEditStatus(e.target.value)}>
               <option value="Active">Active</option>
-              <option value="Pending ">Pending</option>
+              <option value="Pending">Pending</option>
               <option value="Inactive">Inactive</option>
             </select>
           ) : (
