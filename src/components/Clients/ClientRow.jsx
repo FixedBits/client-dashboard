@@ -1,7 +1,7 @@
-import React from "react";
 import { useState } from "react";
 import "../../styles/ClientRow.css";
 import "../../styles/Modal.css";
+import { getEmailError } from "../../utils/validateEmail";
 
 // Single table row with edit/delete/view functionality
 function ClientRow({ name, email, company, status, actions, createdAt, updatedAt, onSave, onDelete }) {
@@ -15,19 +15,24 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
   // Modal visibility
   const [showConfirm, setShowConfirm] = useState(false);
   const [showView, setShowView] = useState(false);
-
+  const [errors, setErrors] = useState({});
   return (
     <>
       {/* Main table row */}
       <tr className="client-row">
         <td data-label="Name" className="nowrap">
           {isEditing ? <input value={editName} onChange={(e) => setEditName(e.target.value)} /> : name}
+          {errors.name && <p className="error">{errors.name}</p>}
         </td>
 
-        <td data-label="Email">{isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}</td>
+        <td data-label="Email">
+          {isEditing ? <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} /> : email}
+          {errors.email && <p className="error">{errors.email}</p>}
+        </td>
 
         <td data-label="Company" className="nowrap">
           {isEditing ? <input value={editCompany} onChange={(e) => setEditCompany(e.target.value)} /> : company}
+          {errors.company && <p className="error">{errors.company}</p>}
         </td>
 
         <td data-label="Status">
@@ -53,6 +58,19 @@ function ClientRow({ name, email, company, status, actions, createdAt, updatedAt
                   if (action === "View") setShowView(true);
                   if (action === "Edit") {
                     if (isEditing) {
+                      const newErrors = {};
+
+                      const emailError = getEmailError(editEmail);
+                      if (emailError) newErrors.email = emailError;
+                      if (!editName.trim()) newErrors.name = "Name is required";
+                      if (!editCompany.trim()) newErrors.company = "Company is required";
+
+                      if (Object.keys(newErrors).length > 0) {
+                        setErrors(newErrors);
+                        return;
+                      }
+
+                      setErrors({});
                       onSave({
                         name: editName,
                         email: editEmail,

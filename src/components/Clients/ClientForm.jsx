@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getEmailError } from "../../utils/validateEmail";
 import "../../styles/ClientForm.css";
 
 // Form for adding new clients
@@ -15,13 +16,11 @@ function ClientForm({ onAddClient, onCancel }) {
     const newErrors = {};
 
     // Validate inputs
-    if (!name.trim()) newErrors.name = "Name is required.";
-    if (!email.trim()) newErrors.email = "Email is required.";
-    if (email.includes(" ")) newErrors.email = "Email must not have spaces.";
-    if (!email.includes("@")) newErrors.email = "Email must contain '@'.";
-    if (!email.toLowerCase().endsWith(".com")) newErrors.email = "Email must end with '.com'.";
-    if (!company.trim()) newErrors.company = "Company is required.";
-    if (!status) newErrors.status = "Status is required.";
+    const emailError = getEmailError(email);
+    if (emailError) newErrors.email = emailError;
+    if (!name.trim()) newErrors.name = "Name is required";
+    if (!company.trim()) newErrors.company = "Company is required";
+    if (!status) newErrors.status = "Status is required";
 
     // Stop if errors found
     if (Object.keys(newErrors).length > 0) {
