@@ -60,3 +60,14 @@
   background: var(--dashboard-bg);
   color: var(--dashboard-text);
 }
+
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+  }
+}
