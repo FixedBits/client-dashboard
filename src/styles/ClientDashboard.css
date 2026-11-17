@@ -4,7 +4,7 @@
 .dashboard {
   display: flex; /* main layout: sidebar + content */
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .dashboard-title {
@@ -61,7 +61,6 @@
   color: var(--dashboard-text);
 }
 
-
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
@@ -69,5 +68,11 @@
 
   .dashboard-content {
     margin-left: 0;
+  }
+
+  .charts-row,
+  .middle-row,
+  .bottom-row {
+    flex-direction: column;
   }
 }
