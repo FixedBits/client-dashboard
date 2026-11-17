@@ -1,16 +1,40 @@
-# React + Vite
+# CRM Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React dashboard for managing clients, tracking revenue, and viewing reports, with light and dark themes.
 
-Currently, two official plugins are available:
+**Live demo:** https://fixedbits.github.io/client-dashboard/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Dashboard Page](screenshots/dashboard-page.png)
 
-## React Compiler
+![Reports Page](screenshots/reports-page.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Add, edit, and delete clients, with form validation for name, email, and company
+- Live Recent Activity feed that logs every add, update, and delete
+- Reports page with KPI cards, a dual-axis bar chart, a trend analysis panel, and a data table
+- Interactive revenue charts with formatted tooltips and axes
+- Dark mode toggle in Settings, remembered between visits
+- Client list and activity feed saved to localStorage, with a reset option
+- Responsive charts and a mobile-friendly table layout (full mobile layout in progress)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React with Vite
+- React Router (HashRouter)
+- Recharts
+- Plain CSS with theme variables for light and dark mode
+- Deployed with GitHub Pages
+
+## Run Locally
+
+```
+git clone https://github.com/FixedBits/client-dashboard.git
+cd client-dashboard
+npm install
+npm run dev
+```
+
+## Notes
+
+This is a front-end project. It starts with sample data from local files, and changes are saved in the browser with localStorage. A Node, Express, and MongoDB backend is planned as a future step.
