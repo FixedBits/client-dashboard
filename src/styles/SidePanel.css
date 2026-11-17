@@ -72,3 +72,48 @@
   background: #2451a1;
   color: #e0e7ff;
 }
+
+@media (max-width: 768px) {
+  .side-panel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .panel-title {
+    display: none;
+  }
+
+  .panel-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .panel-links li {
+    margin: 0;
+    font-size: 0;
+  }
+
+  .sidebar-link {
+    padding: 0.6rem;
+  }
+
+  .sidebar-link svg {
+    margin-right: 0;
+    font-size: 22px;
+  }
+
+  .sidebar-link.active {
+    padding: 0.6rem;
+  }
+}
