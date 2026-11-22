@@ -126,4 +126,14 @@
   .bottom-row {
     align-items: normal;
   }
+
+  .reports-table-card table {
+    min-width: 0;
+  }
+
+  .reports-table-card th,
+  .reports-table-card td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
 }
