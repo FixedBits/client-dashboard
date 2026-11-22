@@ -122,4 +122,8 @@
     padding: 8px 6px;
     font-size: 12px;
   }
+
+  .bottom-row {
+    align-items: normal;
+  }
 }

@@ -126,8 +126,10 @@ body {
     background: var(--table-row-odd);
   }
 
-  td[data-label] {
+  .clients-table-wrapper td[data-label] {
     max-width: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .clients-table-wrapper td:last-child {
     border-bottom: none;
