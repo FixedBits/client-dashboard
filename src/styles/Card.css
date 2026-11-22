@@ -4,16 +4,12 @@
 
 /**
  * Base card shell shared by every KPI card.
- * flex: 1 lets cards share the row evenly,
  * min/max-width keep them from squishing or over-stretching.
  */
 .card-container {
   border-radius: 5px;
   margin-top: 2rem;
   padding: 1.2em;
-  width: 300px;
-  flex: 1;
-  min-width: 240px; /* Don't get squished smaller than this */
   box-shadow: 0 4px 20px #0000001a;
 }
 
@@ -29,8 +25,9 @@
  * Row holding all KPI cards across the top of the page.
  */
 .stats-row {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 2rem;
   margin: 0 1rem;
 }
 

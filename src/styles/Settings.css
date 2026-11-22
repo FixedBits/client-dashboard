@@ -97,6 +97,8 @@
 
 .settings-reset-btn {
   font-size: 1em;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .toggle-switch {

@@ -61,6 +61,19 @@
   color: var(--dashboard-text);
 }
 
+.line-chart-card,
+.pie-chart-card,
+.activity-feed-card,
+.revenue-table,
+.reports-chart,
+.reports-table-card {
+  min-width: 0;
+}
+
+.revenue-table,
+.reports-table-card {
+  overflow-x: auto;
+}
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
@@ -68,11 +81,45 @@
 
   .dashboard-content {
     margin-left: 0;
+    padding: 16px 12px 90px;
   }
 
   .charts-row,
   .middle-row,
   .bottom-row {
     flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .line-chart-card,
+  .pie-chart-card,
+  .revenue-table,
+  .reports-chart,
+  .reports-table-card,
+  .clients-table-wrapper {
+    padding: 1rem;
+  }
+
+  .settings-btns-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .line-chart-card .recharts-cartesian-axis-tick-value {
+    font-size: 11px;
+  }
+
+  .line-chart-card {
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .revenue-table table {
+    min-width: 0;
+  }
+
+  .revenue-table th,
+  .revenue-table td {
+    padding: 8px 6px;
+    font-size: 12px;
   }
 }
