@@ -74,6 +74,17 @@
 .reports-table-card {
   overflow-x: auto;
 }
+
+@media (max-width: 1133px) {
+  .reports-page .middle-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .reports-chart .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
@@ -135,5 +146,14 @@
   .reports-table-card td {
     padding: 8px 6px;
     font-size: 12px;
+  }
+
+  .reports-chart .recharts-cartesian-axis-tick-value {
+    font-size: 11px;
+  }
+
+  .recharts-default-legend {
+    font-size: 11px;
+    margin-bottom: 1rem;
   }
 }
