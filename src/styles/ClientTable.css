@@ -92,27 +92,28 @@
 ========================================================= */
 .actions-cell-inner {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 8px 16px;
 }
 
 .actions-cell button {
-  margin-right: 16px;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 /* =========================================================
    TEXT TRUNCATION (VIEW MODE ONLY)
 ========================================================= */
-td[data-label="Name"],
-td[data-label="Company"] {
+td[data-label='Name'],
+td[data-label='Company'] {
   max-width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-td[data-label="Email"] {
+td[data-label='Email'] {
   max-width: 220px;
   white-space: nowrap;
   overflow: hidden;
@@ -185,6 +186,7 @@ table button.view:hover {
   border: 1px solid var(--status-badge-border);
   transition: all 0.2s ease;
   cursor: default;
+  white-space: nowrap;
 }
 
 .client-list-title {
