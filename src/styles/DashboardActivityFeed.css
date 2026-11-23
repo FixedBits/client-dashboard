@@ -1,24 +1,40 @@
+/* =========================================================
+   ACTIVITY FEED CARD
+========================================================= */
 .activity-feed-card {
-  background: var(--card-bg, #fff);
+  background: var(--card-bg, #fff); /* falls back to white if the variable is missing */
   border-radius: 8px;
   padding: 1em 2em;
   font-size: 1.1em;
   box-shadow: 0 4px 20px #0000001a;
 }
+
+.activity-feed-card h3 {
+  padding-bottom: 1em; /* space between the title and the first item */
+}
+
+/* =========================================================
+   ACTIVITY ITEM (one row: dot + message + time)
+========================================================= */
 .activity-item {
   display: flex;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  border-bottom: 1px solid var(--border-color, #e5e7eb); /* divider between rows */
+}
+
+.activity-item:last-child {
+  border-bottom: none; /* no divider after the last row */
 }
 
 .activity-item p {
   margin: 0;
 }
 
+/* Message on the left, time on the right */
 .activity-content {
   display: flex;
-  flex: 1;
+  flex: 1; /* fills the space next to the dot */
   justify-content: space-between;
   align-items: center;
   font-size: 0.95rem;
@@ -27,45 +43,44 @@
 .activity-time {
   color: var(--text-muted, #9ca3af);
   font-size: 0.85rem;
+  white-space: nowrap; /* keeps "2h ago" on one line */
 }
 
-.activity-item:last-child {
-  border-bottom: none;
-}
-
+/* =========================================================
+   STATUS DOT (color shows the type of activity)
+========================================================= */
 .status-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   margin-right: 12px;
-  flex-shrink: 0;
-  background: #9ca3af;
+  flex-shrink: 0; /* dot never gets squished by long text */
+  background: #9ca3af; /* default gray */
 }
 
 .status-dot.added {
-  background: #10b981;
+  background: #10b981; /* green */
 }
 
 .status-dot.updated {
-  background: #f59e0b;
+  background: #f59e0b; /* orange */
 }
 
 .status-dot.deleted {
-  background: #ef4444;
+  background: #ef4444; /* red */
 }
 
 .status-dot.neutral {
-  background: #9ca3af;
-}
-.activity-feed-card h3 {
-  padding-bottom: 1em;
+  background: #9ca3af; /* gray, same as the default */
 }
 
-/* bottom-row (from DashboardHome.jsx */
+/* =========================================================
+   LAYOUT INSIDE THE BOTTOM ROW (from DashboardHome.jsx)
+========================================================= */
 .bottom-row .activity-feed-card {
-  flex: 1;
+  flex: 1; /* takes 1 share of the row */
 }
 
 .bottom-row .revenue-table {
-  flex: 2;
+  flex: 2; /* takes 2 shares, so it is twice as wide as the feed */
 }

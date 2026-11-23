@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0; /* prevents flex children from overflowing horizontally */
-  margin-left: 300px;
+  margin-left: 300px; /* leaves room for the fixed sidebar */
 }
 
 /* "Add" button */
@@ -29,28 +29,34 @@
   border: 1px solid rgba(8, 0, 255, 0.294);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.315);
   border-radius: 5px;
-  align-self: flex-end;
+  align-self: flex-end; /* pushes the button to the right */
 }
 
 .add-btn:hover {
   background: #1d4ed8;
 }
 
+/* =========================================================
+   CONTENT ROWS
+========================================================= */
+/* Row of charts (line chart + pie chart) */
 .charts-row {
   display: flex;
   gap: 2rem;
   margin: 2rem 1rem;
 }
 
+/* Middle row (Reports page: chart + table) */
 .middle-row {
   display: flex;
   gap: 2rem;
   margin: 2rem 1rem;
 }
 
+/* Bottom row (revenue table + activity feed) */
 .bottom-row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* cards keep their own height */
   gap: 2rem;
   margin: 2rem 1rem;
 }
@@ -61,6 +67,7 @@
   color: var(--dashboard-text);
 }
 
+/* Cards can shrink inside flex rows instead of overflowing */
 .line-chart-card,
 .pie-chart-card,
 .activity-feed-card,
@@ -70,31 +77,62 @@
   min-width: 0;
 }
 
+/* Tables scroll sideways instead of breaking the card */
 .revenue-table,
 .reports-table-card {
   overflow-x: auto;
 }
 
+/* =========================================================
+   RESPONSIVE: LARGE LAPTOPS (up to 1400px)
+========================================================= */
+@media (max-width: 1400px) {
+  /* Line chart gets narrow next to the pie chart, so shrink labels early */
+  .line-chart-card .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+  }
+
+  /* Pie chart legend text stays at 14px at every width below this */
+  .pie-chart-card .recharts-legend-item-text {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE: TABLETS (up to 1133px)
+========================================================= */
 @media (max-width: 1133px) {
+  /* Reports page: stack chart and table */
   .reports-page .middle-row {
     display: flex;
     flex-direction: column;
   }
+
   .reports-chart .recharts-cartesian-axis-tick-value {
     font-size: 12px;
   }
+
+  /* Stack line chart and pie chart */
+  .dashboard-content .charts-row {
+    flex-direction: column;
+  }
 }
 
+/* =========================================================
+   RESPONSIVE: PHONES (up to 768px)
+========================================================= */
 @media (max-width: 768px) {
+  /* Sidebar moves out of the side, content takes full width */
   .dashboard {
     flex-direction: column;
   }
 
   .dashboard-content {
     margin-left: 0;
-    padding: 16px 12px 90px;
+    padding: 16px 12px 90px; /* extra bottom space for the bottom nav */
   }
 
+  /* Stack all rows in one column */
   .charts-row,
   .middle-row,
   .bottom-row {
@@ -103,6 +141,7 @@
     margin: 1.5rem 0;
   }
 
+  /* Tighter card padding */
   .line-chart-card,
   .pie-chart-card,
   .revenue-table,
@@ -116,6 +155,7 @@
     padding: 1.5rem 1rem;
   }
 
+  /* Line chart: smaller labels, no left padding so the chart gets more width */
   .line-chart-card .recharts-cartesian-axis-tick-value {
     font-size: 11px;
   }
@@ -124,6 +164,7 @@
     padding: 1rem 1rem 1rem 0;
   }
 
+  /* Revenue table: remove min-width and compact the cells */
   .revenue-table table {
     min-width: 0;
   }
@@ -135,9 +176,10 @@
   }
 
   .bottom-row {
-    align-items: normal;
+    align-items: normal; /* cards fill the full width */
   }
 
+  /* Reports table: same compact treatment */
   .reports-table-card table {
     min-width: 0;
   }
@@ -148,10 +190,13 @@
     font-size: 12px;
   }
 
+  /* Reports bar chart labels */
   .reports-chart .recharts-cartesian-axis-tick-value {
     font-size: 11px;
   }
 
+  /* Reports bar chart legend: smaller text and space below so it clears the axis labels
+     (the pie legend keeps its own 14px from the 1400px block) */
   .recharts-default-legend {
     font-size: 11px;
     margin-bottom: 1rem;
